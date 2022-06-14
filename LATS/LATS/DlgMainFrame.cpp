@@ -7,6 +7,8 @@
 #include "DlgMainFrame.h"
 #include "afxdialogex.h"
 
+#include "LATSManager.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -20,6 +22,7 @@ CDlgMainFrame::CDlgMainFrame(CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_DLG_MAINFRAME, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_bInit = false;
 }
 
 void CDlgMainFrame::DoDataExchange(CDataExchange* pDX)
@@ -46,6 +49,11 @@ BOOL CDlgMainFrame::OnInitDialog()
 
 	// TODO: 여기에 추가 초기화 작업을 추가합니다.
 
+	m_LATSmanager = new CLATSManager(this);
+
+
+
+	m_bInit = true;
 	return TRUE;  // 포커스를 컨트롤에 설정하지 않으면 TRUE를 반환합니다.
 }
 

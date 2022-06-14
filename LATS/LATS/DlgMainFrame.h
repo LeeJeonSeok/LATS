@@ -15,9 +15,11 @@ public:
 
 private:
 
-	//Global LATS Manager Class;
+	//Global LATS Manager Class
 	CLATSManager* m_LATSmanager;
 	
+	//Values
+	bool m_bInit;
 
 private:
 
