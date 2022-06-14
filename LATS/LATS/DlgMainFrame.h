@@ -6,11 +6,36 @@
 
 
 // CDlgMainFrame 대화 상자
+class CLATSManager;
 class CDlgMainFrame : public CDialogEx
 {
 // 생성입니다.
 public:
 	CDlgMainFrame(CWnd* pParent = NULL);	// 표준 생성자입니다.
+
+private:
+
+	//Global LATS Manager Class;
+	CLATSManager* m_LATSmanager;
+	
+
+private:
+
+public:
+
+public:
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 대화 상자 데이터입니다.
 #ifdef AFX_DESIGN_TIME

@@ -189,15 +189,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DlgCaption.h" />
     <ClInclude Include="DlgMainFrame.h" />
     <ClInclude Include="LATS.h" />
+    <ClInclude Include="LATSManager.h" />
+    <ClInclude Include="LATSReference.h" />
+    <ClInclude Include="MyCaptionButton.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DlgCaption.cpp" />
     <ClCompile Include="DlgMainFrame.cpp" />
     <ClCompile Include="LATS.cpp" />
+    <ClCompile Include="LATSManager.cpp" />
+    <ClCompile Include="MyCaptionButton.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
