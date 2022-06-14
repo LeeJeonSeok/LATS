@@ -17,7 +17,7 @@
 
 
 CDlgMainFrame::CDlgMainFrame(CWnd* pParent /*=NULL*/)
-	: CDialogEx(IDD_LATS_DIALOG, pParent)
+	: CDialogEx(IDD_DLG_MAINFRAME, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
