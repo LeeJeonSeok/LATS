@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "ApiKiwoom.h"
 
 
 // CDlgMainFrame 대화 상자
@@ -18,6 +19,9 @@ private:
 	//Global LATS Manager Class
 	CLATSManager* m_LATSmanager;
 	
+	//API
+	CApiKiwoom m_api_kiwoom;
+
 	//Values
 	bool m_bInit;
 
@@ -41,7 +45,7 @@ public:
 
 // 대화 상자 데이터입니다.
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_LATS_DIALOG };
+	enum { IDD = IDD_DLG_MAINFRAME };
 #endif
 
 	protected:
@@ -57,4 +61,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };

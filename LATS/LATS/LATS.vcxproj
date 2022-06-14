@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -189,7 +189,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ApiKiwoom.h" />
     <ClInclude Include="DlgCaption.h" />
+    <ClInclude Include="DlgChildBase.h" />
     <ClInclude Include="DlgMainFrame.h" />
     <ClInclude Include="LATS.h" />
     <ClInclude Include="LATSManager.h" />
@@ -200,7 +202,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ApiKiwoom.cpp" />
     <ClCompile Include="DlgCaption.cpp" />
+    <ClCompile Include="DlgChildBase.cpp" />
     <ClCompile Include="DlgMainFrame.cpp" />
     <ClCompile Include="LATS.cpp" />
     <ClCompile Include="LATSManager.cpp" />

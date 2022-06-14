@@ -28,11 +28,15 @@ CDlgMainFrame::CDlgMainFrame(CWnd* pParent /*=NULL*/)
 void CDlgMainFrame::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	
+	DDX_Control(pDX, IDC_API_KIWOOM, m_api_kiwoom);
+
 }
 
 BEGIN_MESSAGE_MAP(CDlgMainFrame, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 
@@ -51,8 +55,10 @@ BOOL CDlgMainFrame::OnInitDialog()
 
 	m_LATSmanager = new CLATSManager(this);
 
+	m_LATSmanager->SetKiwoomApiAddress(&m_api_kiwoom);
 
 
+	m_LATSmanager->SetChildDlgPosition();
 	m_bInit = true;
 	return TRUE;  // 포커스를 컨트롤에 설정하지 않으면 TRUE를 반환합니다.
 }
@@ -93,3 +99,11 @@ HCURSOR CDlgMainFrame::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CDlgMainFrame::OnSize(UINT nType, int cx, int cy)
+{
+	CDialogEx::OnSize(nType, cx, cy);
+	if (m_bInit) m_LATSmanager->SetChildDlgPosition();
+	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+}

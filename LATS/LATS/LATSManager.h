@@ -1,6 +1,6 @@
 #pragma once
 
-
+class CApiKiwoom;
 class CDlgMainFrame;
 class CDlgCaption;
 
@@ -12,6 +12,9 @@ public:
 
 
 private:
+
+	//API
+	CApiKiwoom* m_ptr_api_kiwoom;
 
 	//Dialog
 	CDlgMainFrame* m_ptr_dlg_mainframe;
@@ -26,7 +29,16 @@ private:
 
 public:
 
+	//Setter
+	void SetKiwoomApiAddress(CApiKiwoom* m_pKiwoom);
+
+	//Getter
+	CApiKiwoom* GetKiwoomApiAddress();
+	CDlgCaption* GetCaptionDlgAddress();
+	CDlgMainFrame* GetMainframeDlgAddress();
+
 public:
 
+	void SetChildDlgPosition();
 };
 

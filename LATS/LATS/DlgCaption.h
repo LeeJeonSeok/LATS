@@ -1,11 +1,10 @@
 ﻿#pragma once
 #include"stdafx.h"
 #include "MyCaptionButton.h"
-
-
+#include "DlgChildBase.h"
 // CDlgCaption 대화 상자
 
-class CDlgCaption : public CDialogEx
+class CDlgCaption : public CDlgChildBase
 {
 	DECLARE_DYNAMIC(CDlgCaption)
 
@@ -25,11 +24,8 @@ private:
 
 
 
-	//initializing
-	bool m_bInit;
-
-
 private:
+	void SetControlPosition();
 
 public:
 
@@ -49,7 +45,7 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnSize(UINT nType, int cx, int cy);
 	virtual BOOL OnInitDialog();
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 };
