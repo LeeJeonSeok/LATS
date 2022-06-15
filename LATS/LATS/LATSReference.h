@@ -13,3 +13,8 @@
 
 #define CR_CAPTION			RGB(50,50,50)
 #define CR_FONT				RGB(62, 210, 173)
+
+//MainFrameSize
+
+#define MFS_WIDTH			800;
+#define MFS_HEIGHT			600;

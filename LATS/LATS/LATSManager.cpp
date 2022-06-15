@@ -12,6 +12,7 @@ CLATSManager::CLATSManager(CDlgMainFrame* pMainFrame)
 {
 	m_ptr_dlg_mainframe = pMainFrame;
 	CreateChildDlg();
+	m_bMaxiMize = false;
 }
 
 CLATSManager::~CLATSManager()
@@ -37,6 +38,11 @@ void CLATSManager::SetKiwoomApiAddress(CApiKiwoom* pKiwoom)
 	m_ptr_api_kiwoom = pKiwoom;
 }
 
+void CLATSManager::SetbMaxiMize(bool bMaxi)
+{
+	m_bMaxiMize = bMaxi;
+}
+
 CApiKiwoom* CLATSManager::GetKiwoomApiAddress()
 {
 	return m_ptr_api_kiwoom;
@@ -50,6 +56,11 @@ CDlgCaption* CLATSManager::GetCaptionDlgAddress()
 CDlgMainFrame* CLATSManager::GetMainframeDlgAddress()
 {
 	return m_ptr_dlg_mainframe;
+}
+
+bool CLATSManager::GetbMaxiMize()
+{
+	return m_bMaxiMize;
 }
 
 void CLATSManager::SetChildDlgPosition()

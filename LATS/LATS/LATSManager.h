@@ -20,6 +20,9 @@ private:
 	CDlgMainFrame* m_ptr_dlg_mainframe;
 	CDlgCaption* m_ptr_dlg_caption;
 
+	//Values
+	bool m_bMaxiMize;
+
 private:
 	
 
@@ -31,11 +34,13 @@ public:
 
 	//Setter
 	void SetKiwoomApiAddress(CApiKiwoom* m_pKiwoom);
+	void SetbMaxiMize(bool bMaxi);
 
 	//Getter
 	CApiKiwoom* GetKiwoomApiAddress();
 	CDlgCaption* GetCaptionDlgAddress();
 	CDlgMainFrame* GetMainframeDlgAddress();
+	bool GetbMaxiMize();
 
 public:
 

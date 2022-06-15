@@ -48,4 +48,7 @@ public:
 	virtual BOOL OnInitDialog();
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	afx_msg void OnBnClickedBtnCaptionHide();
+	afx_msg void OnBnClickedBtnCaptionMinmax();
+	afx_msg void OnBnClickedBtnCaptionClose();
 };

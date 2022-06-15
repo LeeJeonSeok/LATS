@@ -5,6 +5,9 @@
 #include "DlgCaption.h"
 #include "afxdialogex.h"
 
+#include "LATSManager.h"
+#include "DlgMainFrame.h"
+
 
 // CDlgCaption 대화 상자
 
@@ -53,6 +56,9 @@ void CDlgCaption::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CDlgCaption, CDlgChildBase)
 
 	ON_WM_CTLCOLOR()
+	ON_BN_CLICKED(IDC_BTN_CAPTION_HIDE, &CDlgCaption::OnBnClickedBtnCaptionHide)
+	ON_BN_CLICKED(IDC_BTN_CAPTION_MINMAX, &CDlgCaption::OnBnClickedBtnCaptionMinmax)
+	ON_BN_CLICKED(IDC_BTN_CAPTION_CLOSE, &CDlgCaption::OnBnClickedBtnCaptionClose)
 END_MESSAGE_MAP()
 
 
@@ -118,4 +124,33 @@ HBRUSH CDlgCaption::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 
 	// TODO:  기본값이 적당하지 않으면 다른 브러시를 반환합니다.
 	return hbr;
+}
+
+
+void CDlgCaption::OnBnClickedBtnCaptionHide()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_ptr_LATSManager->GetMainframeDlgAddress()->ShowWindow(SW_HIDE);
+}
+
+
+void CDlgCaption::OnBnClickedBtnCaptionMinmax()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if (!m_ptr_LATSManager->GetbMaxiMize())
+	{
+		m_ptr_LATSManager->GetMainframeDlgAddress()->ShowWindow(SW_MAXIMIZE);
+	}
+	else
+	{
+		m_ptr_LATSManager->GetMainframeDlgAddress()->ShowWindow(SW_SHOWNOACTIVATE);
+	}
+	m_ptr_LATSManager->SetbMaxiMize(!m_ptr_LATSManager->GetbMaxiMize());
+}
+
+
+void CDlgCaption::OnBnClickedBtnCaptionClose()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_ptr_LATSManager->GetMainframeDlgAddress()->PostMessageA(WM_CLOSE);
 }

@@ -37,6 +37,7 @@ BEGIN_MESSAGE_MAP(CDlgMainFrame, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_WM_SIZE()
+	ON_WM_GETMINMAXINFO()
 END_MESSAGE_MAP()
 
 
@@ -106,4 +107,17 @@ void CDlgMainFrame::OnSize(UINT nType, int cx, int cy)
 	CDialogEx::OnSize(nType, cx, cy);
 	if (m_bInit) m_LATSmanager->SetChildDlgPosition();
 	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+}
+
+
+void CDlgMainFrame::OnGetMinMaxInfo(MINMAXINFO* lpMMI)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+
+	//작업표시줄 대응
+	lpMMI->ptMaxTrackSize.y = GetSystemMetrics(SM_CYSCREEN);
+
+	lpMMI->ptMinTrackSize.x = MFS_WIDTH;
+	lpMMI->ptMinTrackSize.y = MFS_HEIGHT;
+	CDialogEx::OnGetMinMaxInfo(lpMMI);
 }
