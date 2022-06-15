@@ -51,4 +51,5 @@ public:
 	afx_msg void OnBnClickedBtnCaptionHide();
 	afx_msg void OnBnClickedBtnCaptionMinmax();
 	afx_msg void OnBnClickedBtnCaptionClose();
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 };

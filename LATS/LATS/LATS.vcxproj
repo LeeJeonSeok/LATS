@@ -193,10 +193,17 @@
     <ClInclude Include="DlgCaption.h" />
     <ClInclude Include="DlgChildBase.h" />
     <ClInclude Include="DlgMainFrame.h" />
+    <ClInclude Include="DlgScrollBase.h" />
+    <ClInclude Include="DlgStrategyFrame.h" />
+    <ClInclude Include="DlgStrategyInfo.h" />
+    <ClInclude Include="DlgStrategyMain.h" />
+    <ClInclude Include="DlgStrategySaver.h" />
+    <ClInclude Include="DlgStrategyScroll.h" />
     <ClInclude Include="LATS.h" />
     <ClInclude Include="LATSManager.h" />
     <ClInclude Include="LATSReference.h" />
     <ClInclude Include="MyCaptionButton.h" />
+    <ClInclude Include="MyImageScrollBar.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -206,9 +213,16 @@
     <ClCompile Include="DlgCaption.cpp" />
     <ClCompile Include="DlgChildBase.cpp" />
     <ClCompile Include="DlgMainFrame.cpp" />
+    <ClCompile Include="DlgScrollBase.cpp" />
+    <ClCompile Include="DlgStrategyFrame.cpp" />
+    <ClCompile Include="DlgStrategyInfo.cpp" />
+    <ClCompile Include="DlgStrategyMain.cpp" />
+    <ClCompile Include="DlgStrategySaver.cpp" />
+    <ClCompile Include="DlgStrategyScroll.cpp" />
     <ClCompile Include="LATS.cpp" />
     <ClCompile Include="LATSManager.cpp" />
     <ClCompile Include="MyCaptionButton.cpp" />
+    <ClCompile Include="MyImageScrollBar.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
