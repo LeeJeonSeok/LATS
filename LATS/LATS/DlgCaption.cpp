@@ -73,6 +73,8 @@ BOOL CDlgCaption::OnInitDialog()
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
 	SetBackgroundColor(CR_CAPTION);
 
+	m_btn_caption_icon.LoadBitmaps(IDB_BMP_CAPTION_ICON);
+
 	m_btn_caption_hide.SetButtonText("―");
 	m_btn_caption_minmax.SetButtonText("□");
 	m_btn_caption_close.SetButtonText("×");

@@ -237,6 +237,7 @@
     <None Include="res\LATS.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\Caption_Icon.bmp" />
     <Image Include="res\LATS.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
