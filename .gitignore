@@ -1,53 +1,29 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
+*.opensdf
+*.sdf
+*.ipch
+*.suo
+*.exp
+*.ilk
+*.pdb
+*.iobj
+*.ipdb
+*.aps
+*.user
+*.tlog
 *.obj
-
-# Precompiled Headers
-*.gch
+*.log
+*.res
+*.idb
 *.pch
+*.lastbuildstate
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Directories
+ipch
+Debug
+Release
 
 # Executables
 *.exe
-*.out
-*.app
-*.ilk
-*.ipch
-*.db
-*.log
-*.res
-*.tlog
-LATS/.vs/LATS/v16/.suo
-LATS/Debug/LATS.ilk
-LATS/Debug/LATS.pdb
-LATS/LATS/Debug/LATS.log
-LATS/LATS/Debug/LATS.res
-LATS/LATS/Debug/LATS.tlog/CL.command.1.tlog
-LATS/LATS/Debug/LATS.tlog/CL.read.1.tlog
-LATS/LATS/Debug/LATS.tlog/CL.write.1.tlog
-LATS/LATS/Debug/LATS.tlog/link.command.1.tlog
-LATS/LATS/Debug/LATS.tlog/link.read.1.tlog
-LATS/LATS/Debug/LATS.tlog/link.write.1.tlog
-LATS/LATS/Debug/LATS.tlog/rc.command.1.tlog
-LATS/LATS/Debug/vc140.idb
-LATS/LATS/Debug/vc140.pdb
-LATS/LATS/LATS.APS
+*.dll
+*.lib
+
