@@ -1,29 +1,37 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
 *.opensdf
 *.sdf
-*.ipch
-*.suo
-*.exp
-*.ilk
-*.pdb
-*.iobj
-*.ipdb
-*.aps
-*.user
-*.tlog
-*.obj
+*.cachefile
+
+# Visual Studio profiler
+*.pssess
+*.vsp
+*.vspx
+
+# log files
 *.log
+*.tlog
+
+# image files
+*.ico
+*.bmp
+
+
 *.res
-*.idb
-*.pch
 *.lastbuildstate
-
-# Directories
-ipch
-Debug
-Release
-
-# Executables
+*.obj
+*.pch
+*.unsuccessfulbuild
+*.pdb
+*.idb
 *.exe
-*.dll
-*.lib
-
+*.ilk
