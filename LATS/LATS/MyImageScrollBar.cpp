@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MyImageScrollBar.h"
 
-#include "DlgBaseScrollDialog.h"
+#include "DlgScrollBase.h"
 
 CMyImageScrollBar::CMyImageScrollBar()
 {
