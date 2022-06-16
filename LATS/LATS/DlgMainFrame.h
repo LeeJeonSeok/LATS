@@ -13,6 +13,7 @@ class CDlgMainFrame : public CDialogEx
 // 생성입니다.
 public:
 	CDlgMainFrame(CWnd* pParent = NULL);	// 표준 생성자입니다.
+	~CDlgMainFrame();
 
 private:
 

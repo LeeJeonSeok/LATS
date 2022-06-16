@@ -23,23 +23,23 @@ CDlgCaption::~CDlgCaption()
 {
 }
 
-void CDlgCaption::SetControlPosition()
+void CDlgCaption::SetChildAndControlPosition()
 {
 	CRect rt;
 	GetClientRect(rt);
 
-	int nStaticWidth = rt.Width() - (CS_BTNWIDTH * 3) - CS_ICONWIDTH;
+	int nStaticWidth = rt.Width() - (CTS_BTNWIDTH * 3) - CTS_ICONWIDTH;
 
-	m_btn_caption_icon.MoveWindow(0, 0, CS_ICONWIDTH, CS_HEIGHT);
+	m_btn_caption_icon.MoveWindow(0, 0, CTS_ICONWIDTH, CTS_HEIGHT);
 
-	m_stc_caption_info.MoveWindow(CS_ICONWIDTH + 10, CS_STATICYPOS, nStaticWidth, CS_STATICHEIGHT);
+	m_stc_caption_info.MoveWindow(CTS_ICONWIDTH + 10, CTS_STATICYPOS, nStaticWidth, CTS_STATICHEIGHT);
 
-	int nBTNpos = rt.Width() - (CS_BTNWIDTH * 3);
-	m_btn_caption_hide.MoveWindow(nBTNpos, 0, CS_BTNWIDTH, CS_HEIGHT);
-	nBTNpos += CS_BTNWIDTH;
-	m_btn_caption_minmax.MoveWindow(nBTNpos, 0, CS_BTNWIDTH, CS_HEIGHT);
-	nBTNpos += CS_BTNWIDTH;
-	m_btn_caption_close.MoveWindow(nBTNpos, 0, CS_BTNWIDTH, CS_HEIGHT);
+	int nBTNpos = rt.Width() - (CTS_BTNWIDTH * 3);
+	m_btn_caption_hide.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
+	nBTNpos += CTS_BTNWIDTH;
+	m_btn_caption_minmax.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
+	nBTNpos += CTS_BTNWIDTH;
+	m_btn_caption_close.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
 }
 
 void CDlgCaption::DoDataExchange(CDataExchange* pDX)
@@ -71,7 +71,7 @@ BOOL CDlgCaption::OnInitDialog()
 	CDlgChildBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
-	SetBackgroundColor(CR_CAPTION);
+	SetBackgroundColor(BKC_CAPTION);
 
 	m_btn_caption_icon.LoadBitmaps(IDB_BMP_CAPTION_ICON);
 
@@ -109,7 +109,7 @@ HBRUSH CDlgCaption::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	HBRUSH hbr = CDlgChildBase::OnCtlColor(pDC, pWnd, nCtlColor);
 
 	// TODO:  여기서 DC의 특성을 변경합니다.
-	pDC->SetTextColor(CR_FONT);
+	pDC->SetTextColor(FTC_CAPTION);
 
 	//	// EDT, LST, DLG, STATIC	
 
@@ -118,8 +118,8 @@ HBRUSH CDlgCaption::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	if (nCtlColor == CTLCOLOR_EDIT || nCtlColor == CTLCOLOR_LISTBOX)
 	{
 
-		pDC->SetTextColor(CR_FONT);
-		pDC->SetBkColor(CR_CAPTION);
+		pDC->SetTextColor(FTC_CAPTION);
+		pDC->SetBkColor(BKC_CAPTION);
 
 		hbr = CreateSolidBrush(RGB(45, 45, 45));
 		return hbr;

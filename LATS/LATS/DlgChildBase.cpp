@@ -30,7 +30,7 @@ void CDlgChildBase::OnSize(UINT nType, int cx, int cy)
 	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
 
 	//초기화 후 다이얼로그 배치
-	if(m_bInit) SetControlPosition();
+	if(m_bInit) SetChildAndControlPosition();
 
 	//잔상 방지
 	Invalidate(0);
@@ -44,10 +44,6 @@ BOOL CDlgChildBase::OnInitDialog()
 	m_fnt_caption.CreateFont(15, 0, 0, 0, 0, FALSE, FALSE, 0, DEFAULT_CHARSET,
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
 		DEFAULT_PITCH | FF_SWISS, _T("휴먼옛체"));
-
-	//m_fnt_caption.CreateFont(15, 0, 0, 0, FW_BOLD, FALSE, FALSE, 0, DEFAULT_CHARSET,
-	//	OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
-	//	DEFAULT_PITCH | FF_SWISS, _T("휴먼옛체"));
 
 	
 	return TRUE;  // return TRUE unless you set the focus to a control

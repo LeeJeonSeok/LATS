@@ -1,4 +1,5 @@
 #pragma once
+#include "DlgChildBase.h"
 #include "MyImageScrollBar.h"
 //#include <vector>
 
@@ -33,7 +34,7 @@ namespace SCROLL_ORIENTATION
 }
 
 
-class CDlgScrollBase : public CDialogEx
+class CDlgScrollBase : public CDlgChildBase
 {
 public:
 	CDlgScrollBase(UINT nIDTemplate, CWnd* pParent = NULL);

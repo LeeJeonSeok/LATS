@@ -25,6 +25,11 @@ CDlgMainFrame::CDlgMainFrame(CWnd* pParent /*=NULL*/)
 	m_bInit = false;
 }
 
+CDlgMainFrame::~CDlgMainFrame()
+{
+	delete(m_LATSmanager);
+}
+
 void CDlgMainFrame::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);

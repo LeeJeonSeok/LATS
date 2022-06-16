@@ -30,8 +30,7 @@ protected:
 
 
     //ControlPosition
-    virtual void SetControlPosition() = 0;
-
+    virtual void SetChildAndControlPosition() = 0;
 
 public:
     DECLARE_MESSAGE_MAP()

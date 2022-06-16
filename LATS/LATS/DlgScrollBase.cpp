@@ -3,6 +3,7 @@
 
 
 CDlgScrollBase::CDlgScrollBase(UINT nIDTemplate, CWnd* pParent)
+	:CDlgChildBase(nIDTemplate, pParent)
 {
 	m_bInit = false;
 	m_bRequireSync = false;
@@ -73,31 +74,6 @@ void CDlgScrollBase::SetScrollButtonPointer(CMyImageScrollBar * pCenter, CMyImag
 	m_pBTN_SCROLL_CENTER->SetCenterScrollBar(this);
 	m_bScrollVisible = bScrollVisible;
 }
-
-// test sr scroll
-//void CDlgScrollBase::TestScroll(int nOff)
-//{
-//	if (m_nOffDlg[m_scrollOrientation] < nOff || (nOff + 300) < m_nOffDlg[m_scrollOrientation])
-//	{
-//		/// 스크롤 속도 반응
-//		m_nOffDlg[m_scrollOrientation] = nOff;
-//
-//		MoveWindowScrollDialog();
-//	}
-//
-//
-//	
-//}
-//
-//void CDlgScrollBase::TestScroll22222(int rowIndex)
-//{
-//	int nOff = rowIndex * -100;
-//
-//
-//
-//	TestScroll(nOff);
-//	m_pPairedScrollDialogToSync->TestScroll(nOff);
-//}
 
 void CDlgScrollBase::SetScrollDialogType(SCROLL_TYPE::ENUM type, SCROLL_ORIENTATION::ENUM orientation)
 {
@@ -286,7 +262,7 @@ void CDlgScrollBase::AdjustScrollDialogPosition()
 
 BOOL CDlgScrollBase::OnInitDialog()
 {
-	CDialogEx::OnInitDialog();
+	CDlgChildBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
 
@@ -294,7 +270,7 @@ BOOL CDlgScrollBase::OnInitDialog()
 				  // 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
 }
 
-BEGIN_MESSAGE_MAP(CDlgScrollBase, CDialogEx)
+BEGIN_MESSAGE_MAP(CDlgScrollBase, CDlgChildBase)
 	ON_WM_MOUSEWHEEL() // 메시지 받는 다이얼로그에 추가 할 것
 	ON_WM_ERASEBKGND()
 END_MESSAGE_MAP()
@@ -304,7 +280,7 @@ BOOL CDlgScrollBase::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 
-	BOOL BRes = CDialogEx::OnMouseWheel(nFlags, zDelta, pt);
+	BOOL BRes = CDlgChildBase::OnMouseWheel(nFlags, zDelta, pt);
 	
 	OnScrollDialog(zDelta);
 	if (m_bRequireSync)
@@ -321,5 +297,5 @@ BOOL CDlgScrollBase::OnEraseBkgnd(CDC* pDC)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 	return FALSE;
-	return CDialogEx::OnEraseBkgnd(pDC);
+	return CDlgChildBase::OnEraseBkgnd(pDC);
 }
