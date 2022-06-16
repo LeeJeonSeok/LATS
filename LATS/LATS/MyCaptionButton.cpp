@@ -25,15 +25,15 @@ void CMyCaptionButton::SetHoverRGB()
 {
 	if (m_bCloseButton)
 	{
-		m_nR = 200;
-		m_nG = 80;
-		m_nB = 80;
+		m_nR = 255;
+		m_nG = 0;
+		m_nB = 0;
 	}
 	else
 	{
 		m_nR = 80;
-		m_nG = 84;
-		m_nB = 86;
+		m_nG = 80;
+		m_nB = 80;
 	}
 }
 

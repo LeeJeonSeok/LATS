@@ -13,6 +13,10 @@ public:
 
 private:
 
+	CMyImageScrollBar m_btn_strategy_scroll_upper;
+	CMyImageScrollBar m_btn_strategy_scroll_center;
+	CMyImageScrollBar m_btn_strategy_scroll_lower;
+
 private:
 
 	//virtual
@@ -41,4 +45,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	virtual BOOL OnInitDialog();
+	afx_msg void OnBnClickedBtnStrategyScrollUpper();
+	afx_msg void OnBnClickedBtnStrategyScrollLower();
 };

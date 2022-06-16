@@ -14,7 +14,8 @@ IMPLEMENT_DYNAMIC(CDlgStrategyMain, CDlgScrollBase)
 CDlgStrategyMain::CDlgStrategyMain(CWnd* pParent /*=nullptr*/)
 	: CDlgScrollBase(IDD_DLG_STRATEGY_MAIN, pParent)
 {
-
+	m_nSizeDlg[0] = SGS_FRAME_WIDTH;
+	m_nSizeDlg[1] = 1000 + 10;
 }
 
 CDlgStrategyMain::~CDlgStrategyMain()
@@ -43,7 +44,8 @@ BOOL CDlgStrategyMain::OnInitDialog()
 	CDlgScrollBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
-	SetBackgroundColor(BKC_STRATEGY_MAIN);
+	SetScrollDialogType(SCROLL_TYPE::MENU, SCROLL_ORIENTATION::VERTICAL);
+	MoveWindowScrollDialog();
 
 	m_bInit = true;
 	return TRUE;  // return TRUE unless you set the focus to a control

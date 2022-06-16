@@ -120,7 +120,17 @@ void CDlgMainFrame::OnGetMinMaxInfo(MINMAXINFO* lpMMI)
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 
 	//작업표시줄 대응
-	lpMMI->ptMaxTrackSize.y = GetSystemMetrics(SM_CYSCREEN);
+	RECT rectWorkArea;
+	MONITORINFO mi;
+	mi.cbSize = sizeof(mi);
+	::GetMonitorInfo(::MonitorFromWindow(this->m_hWnd, MONITOR_DEFAULTTONEAREST), &mi);
+	rectWorkArea = mi.rcWork;
+	int cx = rectWorkArea.right - rectWorkArea.left;
+	int cy = rectWorkArea.bottom - rectWorkArea.top;
+
+
+	lpMMI->ptMaxTrackSize.x = cx + (GetSystemMetrics(SM_CXDLGFRAME) * 2) + (GetSystemMetrics(SM_CXPADDEDBORDER) * 2);
+	lpMMI->ptMaxTrackSize.y = cy + (GetSystemMetrics(SM_CYDLGFRAME) * 2) + (GetSystemMetrics(SM_CXPADDEDBORDER) * 2);
 
 	lpMMI->ptMinTrackSize.x = MFS_WIDTH;
 	lpMMI->ptMinTrackSize.y = MFS_HEIGHT;

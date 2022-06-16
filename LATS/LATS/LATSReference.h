@@ -19,8 +19,6 @@
 
 //Strategyize
 #define SGS_FRAME_WIDTH			300
-#define SGS_MAIN_WIDTH			290
-#define SGS_SCROLL_WIDTH		10
 #define SGS_INFO_HEIGHT			100
 #define SGS_SAVER_HEIGHT		100
 
@@ -29,10 +27,10 @@
 
 //background
 #define BKC_CAPTION			RGB(50, 50, 50)
-#define BKC_STRATEGY_INFO	RGB(255, 255, 255)
-#define BKC_STRATEGY_MAIN	RGB(50, 50, 10)
-#define BKC_STRATEGY_SAVER	RGB(255, 255, 255)
-#define BKC_STRATEGY_SCROLL	RGB(10, 50, 50)
+#define BKC_STRATEGY_INFO	RGB(40, 40, 40)
+#define BKC_STRATEGY_MAIN	RGB(90, 90, 90)
+#define BKC_STRATEGY_SCROLL	RGB(90, 90, 90)
+#define BKC_STRATEGY_SAVER	RGB(30, 30, 30)
 
 //font
 #define FTC_CAPTION			RGB(62, 210, 173)
@@ -45,4 +43,4 @@
 */
 
 ///Border
-const int LATS_BORDER_SIZE_Y = GetSystemMetrics(SM_CYDLGFRAME) + GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXPADDEDBORDER);
+const int LATS_BORDER_SIZE_Y = GetSystemMetrics(SM_CYDLGFRAME) + GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXPADDEDBORDER) ;

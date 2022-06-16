@@ -19,33 +19,6 @@ CMyImageScrollBar::CMyImageScrollBar()
 	m_colCenterInner = RGB(124, 124, 127);
 	m_colCenterInnerHover = RGB(194, 194, 201);
 
-
-	// 기본 반전
-	//m_colCenterOuter = RGB(100, 100, 100);
-	//m_colCenterOuterHover = RGB(124, 124, 127);
-	//
-	//m_colCenterInner = RGB(124, 124, 127);
-	//m_colCenterInnerHover = RGB(100, 100, 100);
-
-
-	// 기본 반전2
-	//m_colCenterOuter = RGB(124, 124, 127);
-	//m_colCenterOuterHover = RGB(153, 153, 157);
-	//
-	//m_colCenterInner = RGB(100, 100, 100);
-	//m_colCenterInnerHover = RGB(124, 124, 127);
-
-
-
-	// 노란 계열
-	//m_colCenterOuter = RGB(100, 100, 100);
-	//m_colCenterOuterHover = RGB(153, 153, 153);
-	//
-	//m_colCenterInner = RGB(253, 194, 87);
-	//m_colCenterInnerHover = RGB(254, 221, 160);
-
-
-
 	m_nPos[0] = 0;
 	m_nPos[1] = 0;
 	m_nPos[2] = 0;

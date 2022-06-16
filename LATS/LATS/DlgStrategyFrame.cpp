@@ -7,8 +7,7 @@
 #include "afxdialogex.h"
 
 #include "DlgStrategyInfo.h"
-#include "DlgStrategyMain.h"
-#include "DlgStrategyScroll.h"
+#include "DlgStrategyScrollFrame.h"
 #include "DlgStrategySaver.h"
 
 // CDlgStrategyFrame 대화 상자
@@ -38,13 +37,9 @@ void CDlgStrategyFrame::CreateChild()
 	 CreateChildAndPushBackVector(IDD_DLG_STRATEGY_INFO, m_ptr_dlg_strategy_info);
 	 m_ptr_dlg_strategy_info->ShowWindow(true);
 
-	 m_ptr_dlg_strategy_main = new CDlgStrategyMain();
-	 CreateChildAndPushBackVector(IDD_DLG_STRATEGY_MAIN, m_ptr_dlg_strategy_main);
-	 m_ptr_dlg_strategy_main->ShowWindow(true);
-
-	 m_ptr_dlg_strategy_scroll = new CDlgStrategyScroll();
-	 CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SCROLL, m_ptr_dlg_strategy_scroll);
-	 m_ptr_dlg_strategy_scroll->ShowWindow(true);
+	 m_ptr_dlg_strategy_scroll_Frame = new CDlgStrategyScrollFrame();
+	 CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SCROLL_FRAME, m_ptr_dlg_strategy_scroll_Frame);
+	 m_ptr_dlg_strategy_scroll_Frame->ShowWindow(true);
 
 	 m_ptr_dlg_strategy_saver = new CDlgStrategySaver();
 	CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SAVER, m_ptr_dlg_strategy_saver);
@@ -69,8 +64,7 @@ void CDlgStrategyFrame::SetChildAndControlPosition()
 	int nScrollHeight = rt.Height() - SGS_SAVER_HEIGHT;
 
 	m_ptr_dlg_strategy_info->MoveWindow(0, 0, SGS_FRAME_WIDTH, SGS_INFO_HEIGHT);
-	m_ptr_dlg_strategy_main->MoveWindow(0, SGS_INFO_HEIGHT, SGS_MAIN_WIDTH, nMenuHeight);
-	m_ptr_dlg_strategy_scroll->MoveWindow(SGS_MAIN_WIDTH, SGS_INFO_HEIGHT, SGS_SCROLL_WIDTH, nMenuHeight);
+	m_ptr_dlg_strategy_scroll_Frame->MoveWindow(0, SGS_INFO_HEIGHT, SGS_FRAME_WIDTH, nMenuHeight);
 	m_ptr_dlg_strategy_saver->MoveWindow(0, nScrollHeight, SGS_FRAME_WIDTH, SGS_SAVER_HEIGHT);
 }
 

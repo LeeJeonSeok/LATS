@@ -4,9 +4,8 @@
 
 // CDlgStrategyFrame 대화 상자
 
-class CDlgStrategyInfo;
-class CDlgStrategyMain;
-class CDlgStrategyScroll;
+class CDlgStrategyInfo; 
+class CDlgStrategyScrollFrame;
 class CDlgStrategySaver;
 
 class CDlgStrategyFrame : public CDlgChildBase
@@ -22,8 +21,7 @@ private:
 
 	//Child Dlg
 	CDlgStrategyInfo* m_ptr_dlg_strategy_info;
-	CDlgStrategyMain* m_ptr_dlg_strategy_main;
-	CDlgStrategyScroll* m_ptr_dlg_strategy_scroll;
+	CDlgStrategyScrollFrame* m_ptr_dlg_strategy_scroll_Frame;
 	CDlgStrategySaver* m_ptr_dlg_strategy_saver;
 
 	//Vector

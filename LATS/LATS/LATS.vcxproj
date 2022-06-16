@@ -199,6 +199,7 @@
     <ClInclude Include="DlgStrategyMain.h" />
     <ClInclude Include="DlgStrategySaver.h" />
     <ClInclude Include="DlgStrategyScroll.h" />
+    <ClInclude Include="DlgStrategyScrollFrame.h" />
     <ClInclude Include="LATS.h" />
     <ClInclude Include="LATSManager.h" />
     <ClInclude Include="LATSReference.h" />
@@ -219,6 +220,7 @@
     <ClCompile Include="DlgStrategyMain.cpp" />
     <ClCompile Include="DlgStrategySaver.cpp" />
     <ClCompile Include="DlgStrategyScroll.cpp" />
+    <ClCompile Include="DlgStrategyScrollFrame.cpp" />
     <ClCompile Include="LATS.cpp" />
     <ClCompile Include="LATSManager.cpp" />
     <ClCompile Include="MyCaptionButton.cpp" />

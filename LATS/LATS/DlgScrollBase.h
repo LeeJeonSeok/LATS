@@ -43,7 +43,6 @@ public:
 
 protected:
 
-	bool m_bInit;
 	SCROLL_TYPE::ENUM m_scrollType;
 	SCROLL_ORIENTATION::ENUM m_scrollOrientation;
 
