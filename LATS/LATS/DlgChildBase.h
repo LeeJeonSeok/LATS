@@ -1,5 +1,6 @@
 #pragma once
 #include <afxdialogex.h>
+#include <vector>
 
 class CLATSManager;
 class CDlgChildBase :
@@ -27,10 +28,10 @@ protected:
     //font
     CFont m_fnt_caption;
 protected:
-
-
+	
     //ControlPosition
     virtual void SetChildAndControlPosition() = 0;
+	
 
 public:
     DECLARE_MESSAGE_MAP()

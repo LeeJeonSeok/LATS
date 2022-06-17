@@ -15,13 +15,35 @@ LATSManager에서 캡션, LeftDlg, UsetInfoDlg 가지고 생성(Parent는 메인
 버튼 눌렀을떄 이벤트 해주자!
 
 
+--------------------------------------------------------------------------------------------------------------------
+
+메뉴 생성 / 배치 완료 했고 
+
+스크롤이 일단락 되었다.
+
+이제 메뉴에 컨트롤 배치 함수에서 컨트롤들 배치 후 메뉴 크기가 정해지고 마지막에
+
+	MoveWindowScrollDialog(true);
+	if (m_bRequireSync)
+	{
+		m_pPairedScrollDialogToSync->SetSyncedScrollDialogLength(메뉴높이);
+		m_pPairedScrollDialogToSync->MoveWindowScrollDialog(true);
+	}
+
+이것만 넣어주면 스크롤은 완성이다...
+
+->컨트롤 배치부터 완료하고 아래메뉴로 넘어가자!
+
+
+
+
 
 
 To Do List
 
--캡션바 구현 (진행중)
+-캡션바 구현 (완료)
 
--왼쪽메뉴 구현
+-왼쪽메뉴 구현 (진행중)
 
 -아래메뉴 구현
 

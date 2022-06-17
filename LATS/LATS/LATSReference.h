@@ -19,6 +19,8 @@
 
 //Strategyize
 #define SGS_FRAME_WIDTH			300
+#define SGS_MAIN_WIDTH			290
+#define SGS_SCROLL_WIDTH		10
 #define SGS_INFO_HEIGHT			100
 #define SGS_SAVER_HEIGHT		100
 

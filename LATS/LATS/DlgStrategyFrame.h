@@ -25,14 +25,14 @@ private:
 	CDlgStrategySaver* m_ptr_dlg_strategy_saver;
 
 	//Vector
-	std::vector<CDlgChildBase*> m_vct_dlg_child;
+	std::vector<CDialogEx*> m_vct_dlg_child;
 
 private:
 
 	//create / delete
 	void CreateChild();
 	void DeleteChild();
-	void CreateChildAndPushBackVector(UINT ResourceID, CDlgChildBase* pChild);
+	void CreateChildAndPushBackVector(UINT ResourceID, CDialogEx* pChild);
 
 	//virtual
 	void SetChildAndControlPosition();

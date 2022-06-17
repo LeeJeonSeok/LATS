@@ -14,7 +14,7 @@ IMPLEMENT_DYNAMIC(CDlgStrategyMain, CDlgScrollBase)
 CDlgStrategyMain::CDlgStrategyMain(CWnd* pParent /*=nullptr*/)
 	: CDlgScrollBase(IDD_DLG_STRATEGY_MAIN, pParent)
 {
-	m_nSizeDlg[0] = SGS_FRAME_WIDTH;
+	m_nSizeDlg[0] = SGS_MAIN_WIDTH;
 	m_nSizeDlg[1] = 1000 + 10;
 }
 

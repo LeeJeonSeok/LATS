@@ -22,7 +22,6 @@ BEGIN_MESSAGE_MAP(CDlgChildBase, CDialogEx)
 	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
-
 void CDlgChildBase::OnSize(UINT nType, int cx, int cy)
 {
 	CDialogEx::OnSize(nType, cx, cy);

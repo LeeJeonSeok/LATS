@@ -24,7 +24,7 @@ CDlgStrategyFrame::~CDlgStrategyFrame()
 	DeleteChild();
 }
 
-void CDlgStrategyFrame::CreateChildAndPushBackVector(UINT ResourceID, CDlgChildBase * pChild)
+void CDlgStrategyFrame::CreateChildAndPushBackVector(UINT ResourceID, CDialogEx* pChild)
 {
 	pChild->Create(ResourceID, this);
 	m_vct_dlg_child.push_back(pChild);

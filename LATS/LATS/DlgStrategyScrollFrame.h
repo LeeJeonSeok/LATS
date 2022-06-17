@@ -3,7 +3,9 @@
 
 // CDlgStrategyScrollFrame 대화 상자
 
-class CDlgStrategyScrollFrame : public CDlgChildBase
+class CDlgStrategyScroll;
+class CDlgStrategyMain;
+class CDlgStrategyScrollFrame : public CDialogEx
 {
 	DECLARE_DYNAMIC(CDlgStrategyScrollFrame)
 
@@ -13,6 +15,11 @@ public:
 
 
 private:
+	bool m_bInit;
+
+	//ScrollDialog
+	CDlgStrategyScroll* m_ptr_dlg_strategy_scroll;
+	CDlgStrategyMain* m_ptr_dlg_strategy_main;
 
 private:
 
@@ -35,4 +42,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
 
 	DECLARE_MESSAGE_MAP()
+public:
+	virtual BOOL OnInitDialog();
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };

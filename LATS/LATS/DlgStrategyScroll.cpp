@@ -14,7 +14,7 @@ IMPLEMENT_DYNAMIC(CDlgStrategyScroll, CDlgScrollBase)
 CDlgStrategyScroll::CDlgStrategyScroll(CWnd* pParent /*=nullptr*/)
 	: CDlgScrollBase(IDD_DLG_STRATEGY_SCROLL, pParent)
 {
-	m_nOffDlg[0] = SGS_FRAME_WIDTH;
+	m_nOffDlg[0] = SGS_MAIN_WIDTH;
 	m_nOffDlg[1] = 0; 
 	m_nSizeDlg[0] = 10; 
 	m_nSizeDlg[1] = 1000 + 10;
@@ -38,8 +38,6 @@ void CDlgStrategyScroll::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(CDlgStrategyScroll, CDlgScrollBase)
-	ON_BN_CLICKED(IDC_BTN_STRATEGY_SCROLL_UPPER, &CDlgStrategyScroll::OnBnClickedBtnStrategyScrollUpper)
-	ON_BN_CLICKED(IDC_BTN_STRATEGY_SCROLL_LOWER, &CDlgStrategyScroll::OnBnClickedBtnStrategyScrollLower)
 END_MESSAGE_MAP()
 
 
@@ -51,9 +49,8 @@ BOOL CDlgStrategyScroll::OnInitDialog()
 	CDlgScrollBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
+	SetBackgroundColor(BKC_STRATEGY_SCROLL);
 	SetScrollButtonPointer(&m_btn_strategy_scroll_center, &m_btn_strategy_scroll_upper, &m_btn_strategy_scroll_lower, true);
-
-
 	SetScrollDialogType(SCROLL_TYPE::SCROLLBAR, SCROLL_ORIENTATION::VERTICAL);
 	MoveWindowScrollDialog();
 	m_bInit = true;
@@ -61,24 +58,3 @@ BOOL CDlgStrategyScroll::OnInitDialog()
 				  // 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
 }
 
-
-void CDlgStrategyScroll::OnBnClickedBtnStrategyScrollUpper()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	if (m_bRequireSync)
-	{
-		m_pPairedScrollDialogToSync->SetSyncedScrollDialogLength(m_nSizeDlg[1]);
-		m_pPairedScrollDialogToSync->OnScrollDialog(120);
-	}
-}
-
-
-void CDlgStrategyScroll::OnBnClickedBtnStrategyScrollLower()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	if (m_bRequireSync)
-	{
-		m_pPairedScrollDialogToSync->SetSyncedScrollDialogLength(m_nSizeDlg[1]);
-		m_pPairedScrollDialogToSync->OnScrollDialog(120);
-	}
-}
