@@ -75,28 +75,10 @@
     <ClInclude Include="DlgStrategyScrollFrame.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyComboBox.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyEdit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyImageTextButton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="DlgUserInfo.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DlgHistory.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MyComboBox.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEdit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MyImageTextButton.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -149,28 +131,10 @@
     <ClCompile Include="DlgStrategyScrollFrame.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyComboBox.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyEdit.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyImageTextButton.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="DlgUserInfo.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="DlgHistory.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MyComboBox.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEdit.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MyImageTextButton.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
