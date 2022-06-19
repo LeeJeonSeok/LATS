@@ -34,6 +34,8 @@ private:
 	void DeleteChild();
 	void CreateChildAndPushBackVector(UINT ResourceID, CDialogEx* pChild);
 
+	void ChangeMenuToAfterLogin();
+
 	//virtual
 	void SetChildAndControlPosition();
 

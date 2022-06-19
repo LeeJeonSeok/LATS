@@ -12,17 +12,22 @@ public:
 	virtual ~CDlgStrategyInfo();
 	
 private:
+	
+	//controls
+	CBitmapButton m_btn_strategy_info_type_left;
+	CBitmapButton m_btn_strategy_info_type_right;
+	CStatic	m_stc_strategy_info_name;
+	CStatic m_stc_strategy_info_type;
 
 private:
 
+
+public:
+
+public:
+
 	//virtual
 	void SetChildAndControlPosition();
-
-public:
-
-public:
-
-
 
 
 

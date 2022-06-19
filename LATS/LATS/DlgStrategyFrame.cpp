@@ -30,6 +30,11 @@ void CDlgStrategyFrame::CreateChildAndPushBackVector(UINT ResourceID, CDialogEx*
 	m_vct_dlg_child.push_back(pChild);
 }
 
+void CDlgStrategyFrame::ChangeMenuToAfterLogin()
+{
+	m_ptr_dlg_strategy_info->SetChildAndControlPosition();
+}
+
 
 void CDlgStrategyFrame::CreateChild()
 {

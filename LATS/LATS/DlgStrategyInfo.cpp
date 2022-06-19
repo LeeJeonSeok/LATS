@@ -23,11 +23,20 @@ CDlgStrategyInfo::~CDlgStrategyInfo()
 
 void CDlgStrategyInfo::SetChildAndControlPosition()
 {
+	m_stc_strategy_info_name.MoveWindow(10, 15, SGS_FRAME_WIDTH - 20, 45);
+	m_btn_strategy_info_type_left.MoveWindow(10, 70, 60, 60);
+	m_stc_strategy_info_type.MoveWindow(70, 85, 160, 45);
+	m_btn_strategy_info_type_right.MoveWindow(230, 70, 60, 60);
 }
+
 
 void CDlgStrategyInfo::DoDataExchange(CDataExchange* pDX)
 {
 	CDlgChildBase::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BTN_STRATEGY_INFO_TYPE_LEFT, m_btn_strategy_info_type_left);
+	DDX_Control(pDX, IDC_BTN_STRATEGY_INFO_TYPE_RIGHT, m_btn_strategy_info_type_right);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_NAME, m_stc_strategy_info_name);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_TYPE, m_stc_strategy_info_type);
 }
 
 

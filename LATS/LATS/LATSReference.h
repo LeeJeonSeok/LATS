@@ -18,14 +18,15 @@
 #define MFS_HEIGHT			600
 
 //StrategySize
-#define SGS_FRAME_WIDTH			300
-#define SGS_MAIN_WIDTH			290
+#define SGS_FRAME_WIDTH			302
+#define SGS_MAIN_WIDTH			292
 #define SGS_SCROLL_WIDTH		10
 #define SGS_INFO_HEIGHT			130
 #define SGS_SAVER_HEIGHT		130
 
 //UserInfoSize
 #define UIS_HEIGHT				210
+
 
 ///Color Reference
 
