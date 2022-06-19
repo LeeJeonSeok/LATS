@@ -209,7 +209,10 @@
     <ClInclude Include="LATSManager.h" />
     <ClInclude Include="LATSReference.h" />
     <ClInclude Include="MyCaptionButton.h" />
+    <ClInclude Include="MyComboBox.h" />
+    <ClInclude Include="MyEdit.h" />
     <ClInclude Include="MyImageScrollBar.h" />
+    <ClInclude Include="MyImageTextButton.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -234,7 +237,10 @@
     <ClCompile Include="LATS.cpp" />
     <ClCompile Include="LATSManager.cpp" />
     <ClCompile Include="MyCaptionButton.cpp" />
+    <ClCompile Include="MyComboBox.cpp" />
+    <ClCompile Include="MyEdit.cpp" />
     <ClCompile Include="MyImageScrollBar.cpp" />
+    <ClCompile Include="MyImageTextButton.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
