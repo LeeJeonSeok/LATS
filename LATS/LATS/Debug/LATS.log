@@ -1,14 +1,29 @@
-﻿  DlgCaption.cpp
-  코드를 생성하고 있습니다...
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
+﻿  stdafx.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: 'MBCS_Support_Deprecated_In_MFC' 선언을 참조하십시오.
+  MyImageScrollBar.cpp
+  MyCaptionButton.cpp
+c:\users\김지영\desktop\leecoder\개발\git\lats\lats\lats\mycaptionbutton.cpp(117): warning C4800: 'BOOL': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
   LATSManager.cpp
+c:\users\김지영\desktop\leecoder\개발\git\lats\lats\lats\latsmanager.cpp(51): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   LATS.cpp
+  DlgUserInfo.cpp
   DlgStrategyScrollFrame.cpp
   DlgStrategyScroll.cpp
   DlgStrategySaver.cpp
   DlgStrategyMain.cpp
   DlgStrategyInfo.cpp
   DlgStrategyFrame.cpp
+c:\users\김지영\desktop\leecoder\개발\git\lats\lats\lats\dlgstrategyframe.cpp(51): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  DlgScrollBase.cpp
   DlgMainFrame.cpp
-  LATS.vcxproj -> D:\Git\LATS\LATS\Debug\LATS.exe
-  LATS.vcxproj -> D:\Git\LATS\LATS\Debug\LATS.pdb (Full PDB)
+  DlgHistory.cpp
+  DlgChildBase.cpp
+  DlgCaption.cpp
+  ApiKiwoom.cpp
+  MyImageTextButton.cpp
+  MyEdit.cpp
+  MyComboBox.cpp
+  코드를 생성하고 있습니다...
+  LATS.vcxproj -> C:\Users\김지영\Desktop\LeeCoder\개발\Git\LATS\LATS\Debug\LATS.exe
+  LATS.vcxproj -> C:\Users\김지영\Desktop\LeeCoder\개발\Git\LATS\LATS\Debug\LATS.pdb (Full PDB)

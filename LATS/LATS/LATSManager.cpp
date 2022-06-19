@@ -6,6 +6,8 @@
 #include "DlgMainFrame.h"
 #include "DlgCaption.h"
 #include "DlgStrategyFrame.h"
+#include "DlgUserInfo.h"
+#include "DlgHistory.h"
 
 
 
@@ -32,6 +34,16 @@ void CLATSManager::CreateChildDlg()
 	SetCreateChildAndPushBackInVector(IDD_DLG_STRATEGY_FRAME,  m_ptr_dlg_strategy_frame);
 	m_ptr_dlg_strategy_frame->SetLATSManagerAddress(this);
 	m_ptr_dlg_strategy_frame->ShowWindow(true);
+
+	m_ptr_dlg_UserInfo = new CDlgUserInfo();
+	SetCreateChildAndPushBackInVector(IDD_DLG_USERINFO, m_ptr_dlg_UserInfo);
+	m_ptr_dlg_UserInfo->SetLATSManagerAddress(this);
+	m_ptr_dlg_UserInfo->ShowWindow(true);
+
+	m_ptr_dlg_history = new CDlgHistory();
+	SetCreateChildAndPushBackInVector(IDD_DLG_HISTORY, m_ptr_dlg_history);
+	m_ptr_dlg_history->SetLATSManagerAddress(this);
+	m_ptr_dlg_history->ShowWindow(true);
 }
 
 void CLATSManager::DeleteChildDlg()
@@ -93,4 +105,6 @@ void CLATSManager::SetChildDlgPosition()
 
 	m_ptr_dlg_caption->MoveWindow(0, 0, rt.Width(), CTS_HEIGHT);
 	m_ptr_dlg_strategy_frame->MoveWindow(0, CTS_HEIGHT, SGS_FRAME_WIDTH, rt.Height());
+	m_ptr_dlg_UserInfo->MoveWindow(SGS_FRAME_WIDTH, rt.Height() + CTS_HEIGHT - UIS_HEIGHT, rt.Width()  - SGS_FRAME_WIDTH, UIS_HEIGHT);
+	m_ptr_dlg_history->MoveWindow(SGS_FRAME_WIDTH, CTS_HEIGHT, rt.Width() - SGS_FRAME_WIDTH, rt.Height() - UIS_HEIGHT);
 }

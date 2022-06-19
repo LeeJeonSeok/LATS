@@ -49,7 +49,6 @@ BOOL CDlgStrategyScroll::OnInitDialog()
 	CDlgScrollBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
-	SetBackgroundColor(BKC_STRATEGY_SCROLL);
 	SetScrollButtonPointer(&m_btn_strategy_scroll_center, &m_btn_strategy_scroll_upper, &m_btn_strategy_scroll_lower, true);
 	SetScrollDialogType(SCROLL_TYPE::SCROLLBAR, SCROLL_ORIENTATION::VERTICAL);
 	MoveWindowScrollDialog();

@@ -7,6 +7,8 @@ class CDlgMainFrame;
 class CDlgCaption;
 class CDlgStrategyFrame;
 class CDlgChildBase;
+class CDlgUserInfo;
+class CDlgHistory;
 
 class CLATSManager
 {
@@ -24,6 +26,8 @@ private:
 	CDlgMainFrame* m_ptr_dlg_mainframe;
 	CDlgCaption* m_ptr_dlg_caption;
 	CDlgStrategyFrame* m_ptr_dlg_strategy_frame;
+	CDlgUserInfo* m_ptr_dlg_UserInfo;
+	CDlgHistory* m_ptr_dlg_history;
 
 	//Values
 	bool m_bMaxiMize;

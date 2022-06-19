@@ -189,7 +189,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyComboBox.h" />
+    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyEdit.h" />
+    <ClInclude Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyImageTextButton.h" />
     <ClInclude Include="ApiKiwoom.h" />
+    <ClInclude Include="DlgHistory.h" />
     <ClInclude Include="DlgCaption.h" />
     <ClInclude Include="DlgChildBase.h" />
     <ClInclude Include="DlgMainFrame.h" />
@@ -200,6 +204,7 @@
     <ClInclude Include="DlgStrategySaver.h" />
     <ClInclude Include="DlgStrategyScroll.h" />
     <ClInclude Include="DlgStrategyScrollFrame.h" />
+    <ClInclude Include="DlgUserInfo.h" />
     <ClInclude Include="LATS.h" />
     <ClInclude Include="LATSManager.h" />
     <ClInclude Include="LATSReference.h" />
@@ -210,9 +215,13 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyComboBox.cpp" />
+    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyEdit.cpp" />
+    <ClCompile Include="..\..\..\..\각종 클래스\ClassTestDialog\ClassTestDialog\MyImageTextButton.cpp" />
     <ClCompile Include="ApiKiwoom.cpp" />
     <ClCompile Include="DlgCaption.cpp" />
     <ClCompile Include="DlgChildBase.cpp" />
+    <ClCompile Include="DlgHistory.cpp" />
     <ClCompile Include="DlgMainFrame.cpp" />
     <ClCompile Include="DlgScrollBase.cpp" />
     <ClCompile Include="DlgStrategyFrame.cpp" />
@@ -221,6 +230,7 @@
     <ClCompile Include="DlgStrategySaver.cpp" />
     <ClCompile Include="DlgStrategyScroll.cpp" />
     <ClCompile Include="DlgStrategyScrollFrame.cpp" />
+    <ClCompile Include="DlgUserInfo.cpp" />
     <ClCompile Include="LATS.cpp" />
     <ClCompile Include="LATSManager.cpp" />
     <ClCompile Include="MyCaptionButton.cpp" />

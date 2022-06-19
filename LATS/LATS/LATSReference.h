@@ -14,25 +14,27 @@
 #define CTS_STATICHEIGHT	20
 
 //MainFrameSize
-#define MFS_WIDTH			800
+#define MFS_WIDTH			900
 #define MFS_HEIGHT			600
 
-//Strategyize
+//StrategySize
 #define SGS_FRAME_WIDTH			300
 #define SGS_MAIN_WIDTH			290
 #define SGS_SCROLL_WIDTH		10
-#define SGS_INFO_HEIGHT			100
-#define SGS_SAVER_HEIGHT		100
+#define SGS_INFO_HEIGHT			130
+#define SGS_SAVER_HEIGHT		130
 
+//UserInfoSize
+#define UIS_HEIGHT				210
 
 ///Color Reference
 
 //background
 #define BKC_CAPTION			RGB(50, 50, 50)
-#define BKC_STRATEGY_INFO	RGB(40, 40, 40)
-#define BKC_STRATEGY_MAIN	RGB(90, 90, 90)
-#define BKC_STRATEGY_SCROLL	RGB(90, 90, 90)
-#define BKC_STRATEGY_SAVER	RGB(30, 30, 30)
+#define BKC_STRATEGY_INFO	RGB(64, 57, 64)
+#define BKC_STRATEGY_MAIN	RGB(74, 68, 67)
+#define BKC_STRATEGY_SAVER	RGB(64, 57, 64)
+#define BKC_USERIFO			RGB(74, 67, 70)
 
 //font
 #define FTC_CAPTION			RGB(62, 210, 173)
