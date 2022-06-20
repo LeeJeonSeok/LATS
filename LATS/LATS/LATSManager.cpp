@@ -101,10 +101,10 @@ void CLATSManager::SetChildDlgPosition()
 	CRect rt;
 	m_ptr_dlg_mainframe->GetClientRect(rt);
 	//보더 보정
-	rt.bottom -= LATS_BORDER_SIZE_Y;
+	rt.bottom -= LATS::SIZE_HEIGHT_BORDER;
 
-	m_ptr_dlg_caption->MoveWindow(0, 0, rt.Width(), CTS_HEIGHT);
-	m_ptr_dlg_strategy_frame->MoveWindow(0, CTS_HEIGHT, SGS_FRAME_WIDTH, rt.Height());
-	m_ptr_dlg_UserInfo->MoveWindow(SGS_FRAME_WIDTH, rt.Height() + CTS_HEIGHT - UIS_HEIGHT, rt.Width()  - SGS_FRAME_WIDTH, UIS_HEIGHT);
-	m_ptr_dlg_history->MoveWindow(SGS_FRAME_WIDTH, CTS_HEIGHT, rt.Width() - SGS_FRAME_WIDTH, rt.Height() - UIS_HEIGHT);
+	m_ptr_dlg_caption->MoveWindow(0, 0, rt.Width(), CAPTION::SIZE_HEIGHT);
+	m_ptr_dlg_strategy_frame->MoveWindow(0, CAPTION::SIZE_HEIGHT, STRATEGY::SIZE_FRAME_WIDTH, rt.Height());
+	m_ptr_dlg_UserInfo->MoveWindow(STRATEGY::SIZE_FRAME_WIDTH, rt.Height() + CAPTION::SIZE_HEIGHT - USER_INFO::SIZE_HEIGHT, rt.Width()  - STRATEGY::SIZE_FRAME_WIDTH, USER_INFO::SIZE_HEIGHT);
+	m_ptr_dlg_history->MoveWindow(STRATEGY::SIZE_FRAME_WIDTH, CAPTION::SIZE_HEIGHT, rt.Width() - STRATEGY::SIZE_FRAME_WIDTH, rt.Height() - USER_INFO::SIZE_HEIGHT);
 }

@@ -132,7 +132,7 @@ void CDlgMainFrame::OnGetMinMaxInfo(MINMAXINFO* lpMMI)
 	lpMMI->ptMaxTrackSize.x = cx + (GetSystemMetrics(SM_CXDLGFRAME) * 2) + (GetSystemMetrics(SM_CXPADDEDBORDER) * 2);
 	lpMMI->ptMaxTrackSize.y = cy + (GetSystemMetrics(SM_CYDLGFRAME) * 2) + (GetSystemMetrics(SM_CXPADDEDBORDER) * 2);
 
-	lpMMI->ptMinTrackSize.x = MFS_WIDTH;
-	lpMMI->ptMinTrackSize.y = MFS_HEIGHT;
+	lpMMI->ptMinTrackSize.x = MAIN_FRAME::SIZE_WIDTH;
+	lpMMI->ptMinTrackSize.y = MAIN_FRAME::SIZE_HEIGHT;
 	CDialogEx::OnGetMinMaxInfo(lpMMI);
 }

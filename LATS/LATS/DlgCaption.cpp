@@ -28,18 +28,18 @@ void CDlgCaption::SetChildAndControlPosition()
 	CRect rt;
 	GetClientRect(rt);
 
-	int nStaticWidth = rt.Width() - (CTS_BTNWIDTH * 3) - CTS_ICONWIDTH;
+	int nStaticWidth = rt.Width() - (CAPTION::SIZE_WIDTH_BTN * 3) - CAPTION::SIZE_WIDTH_ICON;
 
-	m_btn_caption_icon.MoveWindow(0, 0, CTS_ICONWIDTH, CTS_HEIGHT);
+	m_btn_caption_icon.MoveWindow(0, 0, CAPTION::SIZE_WIDTH_ICON, CAPTION::SIZE_HEIGHT);
 
-	m_stc_caption_info.MoveWindow(CTS_ICONWIDTH + 10, CTS_STATICYPOS, nStaticWidth, CTS_STATICHEIGHT);
+	m_stc_caption_info.MoveWindow(CAPTION::SIZE_WIDTH_ICON + 10, CAPTION::POS_STC_Y, nStaticWidth, CAPTION::SIZE_HEIGHT_STC);
 
-	int nBTNpos = rt.Width() - (CTS_BTNWIDTH * 3);
-	m_btn_caption_hide.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
-	nBTNpos += CTS_BTNWIDTH;
-	m_btn_caption_minmax.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
-	nBTNpos += CTS_BTNWIDTH;
-	m_btn_caption_close.MoveWindow(nBTNpos, 0, CTS_BTNWIDTH, CTS_HEIGHT);
+	int nBTNpos = rt.Width() - (CAPTION::SIZE_WIDTH_BTN * 3);
+	m_btn_caption_hide.MoveWindow(nBTNpos, 0, CAPTION::SIZE_WIDTH_BTN, CAPTION::SIZE_HEIGHT);
+	nBTNpos += CAPTION::SIZE_WIDTH_BTN;
+	m_btn_caption_minmax.MoveWindow(nBTNpos, 0, CAPTION::SIZE_WIDTH_BTN, CAPTION::SIZE_HEIGHT);
+	nBTNpos += CAPTION::SIZE_WIDTH_BTN;
+	m_btn_caption_close.MoveWindow(nBTNpos, 0, CAPTION::SIZE_WIDTH_BTN, CAPTION::SIZE_HEIGHT);
 }
 
 void CDlgCaption::DoDataExchange(CDataExchange* pDX)
@@ -71,7 +71,7 @@ BOOL CDlgCaption::OnInitDialog()
 	CDlgChildBase::OnInitDialog();
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
-	SetBackgroundColor(BKC_CAPTION);
+	SetBackgroundColor(CAPTION::COLOR_BKGROUND);
 
 	m_btn_caption_icon.LoadBitmaps(IDB_BMP_CAPTION_ICON);
 
@@ -109,21 +109,11 @@ HBRUSH CDlgCaption::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	HBRUSH hbr = CDlgChildBase::OnCtlColor(pDC, pWnd, nCtlColor);
 
 	// TODO:  여기서 DC의 특성을 변경합니다.
-	pDC->SetTextColor(FTC_CAPTION);
+	pDC->SetTextColor(CAPTION::COLOR_FONT);
 
 	//	// EDT, LST, DLG, STATIC	
 
 	pDC->SelectObject(&m_fnt_caption);
-
-	if (nCtlColor == CTLCOLOR_EDIT || nCtlColor == CTLCOLOR_LISTBOX)
-	{
-
-		pDC->SetTextColor(FTC_CAPTION);
-		pDC->SetBkColor(BKC_CAPTION);
-
-		hbr = CreateSolidBrush(RGB(45, 45, 45));
-		return hbr;
-	}
 
 	// TODO:  기본값이 적당하지 않으면 다른 브러시를 반환합니다.
 	return hbr;

@@ -6,7 +6,7 @@
 
 class CDlgStrategyInfo; 
 class CDlgStrategyScrollFrame;
-class CDlgStrategySaver;
+class CDlgStrategySave;
 
 class CDlgStrategyFrame : public CDlgChildBase
 {
@@ -22,7 +22,7 @@ private:
 	//Child Dlg
 	CDlgStrategyInfo* m_ptr_dlg_strategy_info;
 	CDlgStrategyScrollFrame* m_ptr_dlg_strategy_scroll_Frame;
-	CDlgStrategySaver* m_ptr_dlg_strategy_saver;
+	CDlgStrategySave* m_ptr_dlg_strategy_saver;
 
 	//Vector
 	std::vector<CDialogEx*> m_vct_dlg_child;

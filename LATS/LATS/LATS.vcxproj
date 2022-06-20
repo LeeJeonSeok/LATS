@@ -198,7 +198,7 @@
     <ClInclude Include="DlgStrategyFrame.h" />
     <ClInclude Include="DlgStrategyInfo.h" />
     <ClInclude Include="DlgStrategyMain.h" />
-    <ClInclude Include="DlgStrategySaver.h" />
+    <ClInclude Include="DlgStrategySave.h" />
     <ClInclude Include="DlgStrategyScroll.h" />
     <ClInclude Include="DlgStrategyScrollFrame.h" />
     <ClInclude Include="DlgUserInfo.h" />
@@ -221,7 +221,7 @@
     <ClCompile Include="DlgStrategyFrame.cpp" />
     <ClCompile Include="DlgStrategyInfo.cpp" />
     <ClCompile Include="DlgStrategyMain.cpp" />
-    <ClCompile Include="DlgStrategySaver.cpp" />
+    <ClCompile Include="DlgStrategySave.cpp" />
     <ClCompile Include="DlgStrategyScroll.cpp" />
     <ClCompile Include="DlgStrategyScrollFrame.cpp" />
     <ClCompile Include="DlgUserInfo.cpp" />
@@ -243,6 +243,10 @@
     <None Include="res\LATS.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\Strategy_Info_Btn_left_up.bmp" />
+    <Image Include="res\Strategy_Info_Btn_left_dn.bmp" />
+    <Image Include="res\Strategy_Info_Btn_Right_up.bmp" />
+    <Image Include="res\Strategy_Info_Btn_Right_dn.bmp" />
     <Image Include="res\Caption_Icon.bmp" />
     <Image Include="res\LATS.ico" />
   </ItemGroup>

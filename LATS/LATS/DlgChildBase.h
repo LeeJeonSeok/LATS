@@ -27,6 +27,8 @@ protected:
 
     //font
     CFont m_fnt_caption;
+	CFont m_fnt_strategy_info;
+
 protected:
 	
     //ControlPosition

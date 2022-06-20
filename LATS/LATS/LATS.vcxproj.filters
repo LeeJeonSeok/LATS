@@ -60,9 +60,6 @@
     <ClInclude Include="DlgStrategyMain.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DlgStrategySaver.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="DlgStrategyScroll.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -79,6 +76,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DlgHistory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgStrategySave.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,9 +116,6 @@
     <ClCompile Include="DlgStrategyMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DlgStrategySaver.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="DlgStrategyScroll.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -137,6 +134,9 @@
     <ClCompile Include="DlgHistory.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DlgStrategySave.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LATS.rc">
@@ -153,6 +153,18 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="res\Caption_Icon.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Strategy_Info_Btn_left_up.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Strategy_Info_Btn_left_dn.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Strategy_Info_Btn_Right_up.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Strategy_Info_Btn_Right_dn.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

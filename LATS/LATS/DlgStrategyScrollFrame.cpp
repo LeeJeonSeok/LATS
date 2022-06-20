@@ -53,7 +53,7 @@ BOOL CDlgStrategyScrollFrame::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	SetBackgroundColor(BKC_STRATEGY_MAIN);
+	SetBackgroundColor(STRATEGY::COLOR_BKGROUND_MAIN);
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
 	m_ptr_dlg_strategy_main = new CDlgStrategyMain();

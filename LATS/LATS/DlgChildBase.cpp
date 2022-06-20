@@ -44,6 +44,10 @@ BOOL CDlgChildBase::OnInitDialog()
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
 		DEFAULT_PITCH | FF_SWISS, _T("휴먼옛체"));
 
+	m_fnt_strategy_info.CreateFontA(30, 0, 0, 0, 0, FALSE, FALSE, 0, DEFAULT_CHARSET,
+		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
+		DEFAULT_PITCH | FF_SWISS, _T("휴먼옛체"));
+
 	
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.

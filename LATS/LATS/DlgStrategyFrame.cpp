@@ -8,7 +8,7 @@
 
 #include "DlgStrategyInfo.h"
 #include "DlgStrategyScrollFrame.h"
-#include "DlgStrategySaver.h"
+#include "DlgStrategySave.h"
 
 // CDlgStrategyFrame 대화 상자
 
@@ -46,8 +46,8 @@ void CDlgStrategyFrame::CreateChild()
 	 CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SCROLL_FRAME, m_ptr_dlg_strategy_scroll_Frame);
 	 m_ptr_dlg_strategy_scroll_Frame->ShowWindow(true);
 
-	 m_ptr_dlg_strategy_saver = new CDlgStrategySaver();
-	CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SAVER, m_ptr_dlg_strategy_saver);
+	 m_ptr_dlg_strategy_saver = new CDlgStrategySave();
+	CreateChildAndPushBackVector(IDD_DLG_STRATEGY_SAVE, m_ptr_dlg_strategy_saver);
 	 m_ptr_dlg_strategy_saver->ShowWindow(true);
 }
 
@@ -65,12 +65,12 @@ void CDlgStrategyFrame::SetChildAndControlPosition()
 	CRect rt;
 	GetClientRect(rt);
 	
-	int nMenuHeight = rt.Height() - SGS_INFO_HEIGHT - SGS_SAVER_HEIGHT;
-	int nScrollHeight = rt.Height() - SGS_SAVER_HEIGHT;
+	int nMenuHeight = rt.Height() - STRATEGY::SIZE_HEIGHT_INFO - STRATEGY::SIZE_HEIGHT_SAVE;
+	int nScrollHeight = rt.Height() - STRATEGY::SIZE_HEIGHT_SAVE;
 
-	m_ptr_dlg_strategy_info->MoveWindow(0, 0, SGS_FRAME_WIDTH, SGS_INFO_HEIGHT);
-	m_ptr_dlg_strategy_scroll_Frame->MoveWindow(0, SGS_INFO_HEIGHT, SGS_FRAME_WIDTH, nMenuHeight);
-	m_ptr_dlg_strategy_saver->MoveWindow(0, nScrollHeight, SGS_FRAME_WIDTH, SGS_SAVER_HEIGHT);
+	m_ptr_dlg_strategy_info->MoveWindow(0, 0, STRATEGY::SIZE_FRAME_WIDTH, STRATEGY::SIZE_HEIGHT_INFO);
+	m_ptr_dlg_strategy_scroll_Frame->MoveWindow(0, STRATEGY::SIZE_HEIGHT_INFO, STRATEGY::SIZE_FRAME_WIDTH, nMenuHeight);
+	m_ptr_dlg_strategy_saver->MoveWindow(0, nScrollHeight, STRATEGY::SIZE_FRAME_WIDTH, STRATEGY::SIZE_HEIGHT_SAVE);
 }
 
 void CDlgStrategyFrame::DoDataExchange(CDataExchange* pDX)
