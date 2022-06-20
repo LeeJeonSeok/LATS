@@ -6,6 +6,7 @@
 #include "DlgStrategyInfo.h"
 #include "afxdialogex.h"
 
+#include "LATSManager.h"
 
 // CDlgStrategyInfo 대화 상자
 
@@ -29,6 +30,11 @@ void CDlgStrategyInfo::SetChildAndControlPosition()
 	m_btn_strategy_info_type_right.MoveWindow(230, 70, 60, 60);
 }
 
+void CDlgStrategyInfo::SetStrategyMenuTypeText(CString Text)
+{
+	m_stc_strategy_info_type.SetWindowTextA(Text);
+}
+
 
 void CDlgStrategyInfo::DoDataExchange(CDataExchange* pDX)
 {
@@ -42,6 +48,8 @@ void CDlgStrategyInfo::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CDlgStrategyInfo, CDlgChildBase)
 	ON_WM_CTLCOLOR()
+	ON_BN_CLICKED(IDC_BTN_STRATEGY_INFO_TYPE_LEFT, &CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeLeft)
+	ON_BN_CLICKED(IDC_BTN_STRATEGY_INFO_TYPE_RIGHT, &CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeRight)
 END_MESSAGE_MAP()
 
 
@@ -74,4 +82,42 @@ HBRUSH CDlgStrategyInfo::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 
 	// TODO:  기본값이 적당하지 않으면 다른 브러시를 반환합니다.
 	return hbr;
+}
+
+
+void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeLeft()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	switch (m_ptr_LATSManager->GetStrategyMenuState())
+	{
+	case STRATEGY_MENU::BUY:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
+		break;
+	case STRATEGY_MENU::CELL:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
+		break;
+	case STRATEGY_MENU::MONEY:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
+		break;
+
+	}
+}
+
+
+void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeRight()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	switch (m_ptr_LATSManager->GetStrategyMenuState())
+	{
+	case STRATEGY_MENU::BUY:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
+		break;
+	case STRATEGY_MENU::CELL:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
+		break;
+	case STRATEGY_MENU::MONEY:
+		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
+		break;
+
+	}
 }

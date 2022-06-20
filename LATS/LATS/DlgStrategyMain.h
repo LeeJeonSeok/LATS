@@ -22,6 +22,11 @@ public:
 
 public:
 
+	//ChangeMenu
+	void HideAllControls();
+	void SetPlaceToBuyMenu();
+	void SetPlaceToCellMenu();
+	void SetPlaceToMoneyMenu();
 
 
 

@@ -16,6 +16,7 @@ CLATSManager::CLATSManager(CDlgMainFrame* pMainFrame)
 	m_ptr_dlg_mainframe = pMainFrame;
 	CreateChildDlg();
 	m_bMaxiMize = false;
+	m_strategy_state = STRATEGY_MENU::BUY;
 }
 
 CLATSManager::~CLATSManager()
@@ -91,9 +92,33 @@ CDlgStrategyFrame * CLATSManager::GetStrategyFrameAddress()
 	return nullptr;
 }
 
+STRATEGY_MENU::ENUM CLATSManager::GetStrategyMenuState()
+{
+	return m_strategy_state;
+}
+
 bool CLATSManager::GetbMaxiMize()
 {
 	return m_bMaxiMize;
+}
+
+void CLATSManager::ChangeStrategyMenu(STRATEGY_MENU::ENUM MenuStyle)
+{
+	switch (MenuStyle)
+	{
+	case STRATEGY_MENU::BUY:
+		m_ptr_dlg_strategy_frame->SetStrategyTypeText("매수설정");
+		break;
+	case STRATEGY_MENU::CELL:
+		m_ptr_dlg_strategy_frame->SetStrategyTypeText("매도설정");
+		break;
+	case STRATEGY_MENU::MONEY:
+		m_ptr_dlg_strategy_frame->SetStrategyTypeText("자금운용");
+		break;
+
+	}
+	m_strategy_state = MenuStyle;
+	m_ptr_dlg_strategy_frame->SetStrategyMenuState(MenuStyle);
 }
 
 void CLATSManager::SetChildDlgPosition()

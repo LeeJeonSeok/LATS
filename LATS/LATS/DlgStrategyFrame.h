@@ -32,7 +32,7 @@ private:
 	//create / delete
 	void CreateChild();
 	void DeleteChild();
-	void CreateChildAndPushBackVector(UINT ResourceID, CDialogEx* pChild);
+	void CreateChildAndPushBackVector(UINT ResourceID, CDlgChildBase* pChild);
 
 	void ChangeMenuToAfterLogin();
 
@@ -44,6 +44,8 @@ public:
 
 public:
 
+	void SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle);
+	void SetStrategyTypeText(CString Text);
 
 
 

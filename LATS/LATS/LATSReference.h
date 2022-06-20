@@ -56,3 +56,11 @@ namespace USER_INFO
 	//Color
 	const COLORREF COLOR_BKGROUND = RGB(74, 67, 70);
 }
+
+namespace STRATEGY_MENU
+{
+	enum ENUM
+	{
+		BUY, CELL, MONEY
+	};
+}

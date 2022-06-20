@@ -26,6 +26,22 @@ void CDlgStrategyMain::SetChildAndControlPosition()
 {
 }
 
+void CDlgStrategyMain::HideAllControls()
+{
+}
+
+void CDlgStrategyMain::SetPlaceToBuyMenu()
+{
+}
+
+void CDlgStrategyMain::SetPlaceToCellMenu()
+{
+}
+
+void CDlgStrategyMain::SetPlaceToMoneyMenu()
+{
+}
+
 void CDlgStrategyMain::DoDataExchange(CDataExchange* pDX)
 {
 	CDlgScrollBase::DoDataExchange(pDX);

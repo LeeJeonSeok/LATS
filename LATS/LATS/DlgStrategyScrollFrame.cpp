@@ -15,7 +15,7 @@
 IMPLEMENT_DYNAMIC(CDlgStrategyScrollFrame, CDlgChildBase)
 
 CDlgStrategyScrollFrame::CDlgStrategyScrollFrame(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_DLG_STRATEGY_SCROLL_FRAME, pParent)
+	: CDlgChildBase(IDD_DLG_STRATEGY_SCROLL_FRAME, pParent)
 {
 
 }
@@ -35,13 +35,32 @@ void CDlgStrategyScrollFrame::SetChildAndControlPosition()
 	m_ptr_dlg_strategy_scroll->MoveWindow(FrameRect.Width() - 10, 0, 10, FrameRect.Height());
 }
 
+void CDlgStrategyScrollFrame::SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle)
+{
+
+	m_ptr_dlg_strategy_main->HideAllControls();
+	switch (MenuStyle)
+	{
+	case STRATEGY_MENU::BUY:
+		m_ptr_dlg_strategy_main->SetPlaceToBuyMenu();
+		break;
+	case STRATEGY_MENU::CELL:
+		m_ptr_dlg_strategy_main->SetPlaceToCellMenu();
+		break;
+	case STRATEGY_MENU::MONEY:
+		m_ptr_dlg_strategy_main->SetPlaceToMoneyMenu();
+		break;
+
+	}
+}
+
 void CDlgStrategyScrollFrame::DoDataExchange(CDataExchange* pDX)
 {
-	CDialogEx::DoDataExchange(pDX);
+	CDlgChildBase::DoDataExchange(pDX);
 }
 
 
-BEGIN_MESSAGE_MAP(CDlgStrategyScrollFrame, CDialogEx)
+BEGIN_MESSAGE_MAP(CDlgStrategyScrollFrame, CDlgChildBase)
 	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
@@ -51,7 +70,7 @@ END_MESSAGE_MAP()
 
 BOOL CDlgStrategyScrollFrame::OnInitDialog()
 {
-	CDialogEx::OnInitDialog();
+	CDlgChildBase::OnInitDialog();
 
 	SetBackgroundColor(STRATEGY::COLOR_BKGROUND_MAIN);
 
@@ -59,10 +78,12 @@ BOOL CDlgStrategyScrollFrame::OnInitDialog()
 	m_ptr_dlg_strategy_main = new CDlgStrategyMain();
 	m_ptr_dlg_strategy_main->Create(IDD_DLG_STRATEGY_MAIN, this);
 	m_ptr_dlg_strategy_main->ShowWindow(true);
+	m_ptr_dlg_strategy_main->SetLATSManagerAddress(m_ptr_LATSManager);
 
 	m_ptr_dlg_strategy_scroll = new CDlgStrategyScroll();
 	m_ptr_dlg_strategy_scroll->Create(IDD_DLG_STRATEGY_SCROLL, this);
 	m_ptr_dlg_strategy_scroll->ShowWindow(true);
+	m_ptr_dlg_strategy_scroll->SetLATSManagerAddress(m_ptr_LATSManager);
 
 	SetChildAndControlPosition();
 
@@ -79,7 +100,7 @@ BOOL CDlgStrategyScrollFrame::OnInitDialog()
 
 void CDlgStrategyScrollFrame::OnSize(UINT nType, int cx, int cy)
 {
-	CDialogEx::OnSize(nType, cx, cy);
+	CDlgChildBase::OnSize(nType, cx, cy);
 
 	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
 	if (m_bInit)

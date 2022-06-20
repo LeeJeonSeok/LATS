@@ -32,6 +32,8 @@ private:
 	//Values
 	bool m_bMaxiMize;
 
+	STRATEGY_MENU::ENUM m_strategy_state;
+
 	//Vector
 	std::vector<CDlgChildBase*> m_vct_dlg_child;
 
@@ -54,9 +56,12 @@ public:
 	CDlgCaption* GetCaptionDlgAddress();
 	CDlgMainFrame* GetMainframeDlgAddress();
 	CDlgStrategyFrame* GetStrategyFrameAddress();
+	STRATEGY_MENU::ENUM GetStrategyMenuState();
+
 	bool GetbMaxiMize();
 
-public:
+	//change Menu
+	void ChangeStrategyMenu(STRATEGY_MENU::ENUM MenuStyle);
 
 	void SetChildDlgPosition();
 };

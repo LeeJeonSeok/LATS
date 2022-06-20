@@ -5,7 +5,7 @@
 
 class CDlgStrategyScroll;
 class CDlgStrategyMain;
-class CDlgStrategyScrollFrame : public CDialogEx
+class CDlgStrategyScrollFrame : public CDlgChildBase
 {
 	DECLARE_DYNAMIC(CDlgStrategyScrollFrame)
 
@@ -29,8 +29,8 @@ private:
 public:
 
 public:
-
-
+	//ChangeMenu
+	void SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle);
 
 
 // 대화 상자 데이터입니다.

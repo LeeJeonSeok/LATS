@@ -24,10 +24,11 @@ CDlgStrategyFrame::~CDlgStrategyFrame()
 	DeleteChild();
 }
 
-void CDlgStrategyFrame::CreateChildAndPushBackVector(UINT ResourceID, CDialogEx* pChild)
+void CDlgStrategyFrame::CreateChildAndPushBackVector(UINT ResourceID, CDlgChildBase* pChild)
 {
 	pChild->Create(ResourceID, this);
 	m_vct_dlg_child.push_back(pChild);
+	pChild->SetLATSManagerAddress(m_ptr_LATSManager);
 }
 
 void CDlgStrategyFrame::ChangeMenuToAfterLogin()
@@ -71,6 +72,16 @@ void CDlgStrategyFrame::SetChildAndControlPosition()
 	m_ptr_dlg_strategy_info->MoveWindow(0, 0, STRATEGY::SIZE_FRAME_WIDTH, STRATEGY::SIZE_HEIGHT_INFO);
 	m_ptr_dlg_strategy_scroll_Frame->MoveWindow(0, STRATEGY::SIZE_HEIGHT_INFO, STRATEGY::SIZE_FRAME_WIDTH, nMenuHeight);
 	m_ptr_dlg_strategy_saver->MoveWindow(0, nScrollHeight, STRATEGY::SIZE_FRAME_WIDTH, STRATEGY::SIZE_HEIGHT_SAVE);
+}
+
+void CDlgStrategyFrame::SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle)
+{
+	m_ptr_dlg_strategy_scroll_Frame->SetStrategyMenuState(MenuStyle);
+}
+
+void CDlgStrategyFrame::SetStrategyTypeText(CString Text)
+{
+	m_ptr_dlg_strategy_info->SetStrategyMenuTypeText(Text);
 }
 
 void CDlgStrategyFrame::DoDataExchange(CDataExchange* pDX)
