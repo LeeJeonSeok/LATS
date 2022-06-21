@@ -16,7 +16,7 @@ CMyImageScrollBar::CMyImageScrollBar()
 	m_colCenterOuter = RGB(100, 100, 100);
 	m_colCenterOuterHover = RGB(153, 153, 153);
 
-	m_colCenterInner = RGB(50, 50, 50);
+	m_colCenterInner = RGB(125, 125, 125);
 	m_colCenterInnerHover = RGB(194, 194, 201);
 
 	m_nPos[0] = 0;
