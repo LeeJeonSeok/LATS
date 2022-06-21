@@ -4,9 +4,6 @@
 
 // CDlgStrategyFrame 대화 상자
 
-class CDlgStrategyInfo; 
-class CDlgStrategyScrollFrame;
-class CDlgStrategySave;
 
 class CDlgStrategyFrame : public CDlgChildBase
 {
@@ -19,35 +16,14 @@ public:
 
 private:
 
-	//Child Dlg
-	CDlgStrategyInfo* m_ptr_dlg_strategy_info;
-	CDlgStrategyScrollFrame* m_ptr_dlg_strategy_scroll_Frame;
-	CDlgStrategySave* m_ptr_dlg_strategy_saver;
-
-	//Vector
-	std::vector<CDialogEx*> m_vct_dlg_child;
 
 private:
-
-	//create / delete
-	void CreateChild();
-	void DeleteChild();
-	void CreateChildAndPushBackVector(UINT ResourceID, CDlgChildBase* pChild);
-
-	void ChangeMenuToAfterLogin();
-
-	//virtual
-	void SetChildAndControlPosition();
-
+	
 public:
 
 
 public:
-
-	void SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle);
-	void SetStrategyTypeText(CString Text);
-
-
+	void SetChildDlgPosition();
 
 
 

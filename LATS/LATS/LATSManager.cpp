@@ -9,6 +9,10 @@
 #include "DlgUserInfo.h"
 #include "DlgHistory.h"
 
+#include "DlgStrategyInfo.h"
+#include "DlgStrategyScrollFrame.h"
+#include "DlgStrategySave.h"
+
 
 
 CLATSManager::CLATSManager(CDlgMainFrame* pMainFrame)
@@ -26,25 +30,30 @@ CLATSManager::~CLATSManager()
 
 void CLATSManager::CreateChildDlg()
 {
+	//Main
 	m_ptr_dlg_caption = new CDlgCaption();
 	SetCreateChildAndPushBackInVector(IDD_DLG_CAPTION,  m_ptr_dlg_caption);
-	m_ptr_dlg_caption->SetLATSManagerAddress(this);
-	m_ptr_dlg_caption->ShowWindow(true);
 
 	m_ptr_dlg_strategy_frame = new CDlgStrategyFrame();
 	SetCreateChildAndPushBackInVector(IDD_DLG_STRATEGY_FRAME,  m_ptr_dlg_strategy_frame);
-	m_ptr_dlg_strategy_frame->SetLATSManagerAddress(this);
-	m_ptr_dlg_strategy_frame->ShowWindow(true);
 
 	m_ptr_dlg_UserInfo = new CDlgUserInfo();
 	SetCreateChildAndPushBackInVector(IDD_DLG_USERINFO, m_ptr_dlg_UserInfo);
-	m_ptr_dlg_UserInfo->SetLATSManagerAddress(this);
-	m_ptr_dlg_UserInfo->ShowWindow(true);
 
 	m_ptr_dlg_history = new CDlgHistory();
 	SetCreateChildAndPushBackInVector(IDD_DLG_HISTORY, m_ptr_dlg_history);
-	m_ptr_dlg_history->SetLATSManagerAddress(this);
-	m_ptr_dlg_history->ShowWindow(true);
+
+
+	//strategy Child
+	m_ptr_dlg_strategy_info = new CDlgStrategyInfo();
+	 SetCreateStrategyChildAndPushBackInVector(IDD_DLG_STRATEGY_INFO, m_ptr_dlg_strategy_info);
+
+	 m_ptr_dlg_strategy_scroll_Frame = new CDlgStrategyScrollFrame();
+	 SetCreateStrategyChildAndPushBackInVector(IDD_DLG_STRATEGY_SCROLL_FRAME, m_ptr_dlg_strategy_scroll_Frame);
+
+	 m_ptr_dlg_strategy_save = new CDlgStrategySave();
+	SetCreateStrategyChildAndPushBackInVector(IDD_DLG_STRATEGY_SAVE, m_ptr_dlg_strategy_save);
+
 }
 
 void CLATSManager::DeleteChildDlg()
@@ -60,6 +69,16 @@ void CLATSManager::SetCreateChildAndPushBackInVector(UINT nIDTemplate,  CDlgChil
 {
 	pChildDialog->Create(nIDTemplate, m_ptr_dlg_mainframe);
 	m_vct_dlg_child.push_back(pChildDialog);
+	pChildDialog->SetLATSManagerAddress(this);
+	pChildDialog->ShowWindow(true);
+}
+
+void CLATSManager::SetCreateStrategyChildAndPushBackInVector(UINT nIDTemplate, CDlgChildBase * pChildDialog)
+{
+	pChildDialog->Create(nIDTemplate, m_ptr_dlg_strategy_frame);
+	m_vct_dlg_child.push_back(pChildDialog);
+	pChildDialog->SetLATSManagerAddress(this);
+	pChildDialog->ShowWindow(true);
 }
 
 void CLATSManager::SetKiwoomApiAddress(CApiKiwoom* pKiwoom)
@@ -89,7 +108,22 @@ CDlgMainFrame* CLATSManager::GetMainframeDlgAddress()
 
 CDlgStrategyFrame * CLATSManager::GetStrategyFrameAddress()
 {
-	return nullptr;
+	return m_ptr_dlg_strategy_frame;
+}
+
+CDlgStrategyInfo * CLATSManager::GetStrategyInfoAdress()
+{
+	return m_ptr_dlg_strategy_info;
+}
+
+CDlgStrategyScrollFrame * CLATSManager::GetStrategyScrollFrameAdress()
+{
+	return m_ptr_dlg_strategy_scroll_Frame;
+}
+
+CDlgStrategySave * CLATSManager::GetStrategySaveAdress()
+{
+	return m_ptr_dlg_strategy_save;
 }
 
 STRATEGY_MENU::ENUM CLATSManager::GetStrategyMenuState()
@@ -104,21 +138,8 @@ bool CLATSManager::GetbMaxiMize()
 
 void CLATSManager::ChangeStrategyMenu(STRATEGY_MENU::ENUM MenuStyle)
 {
-	switch (MenuStyle)
-	{
-	case STRATEGY_MENU::BUY:
-		m_ptr_dlg_strategy_frame->SetStrategyTypeText("매수설정");
-		break;
-	case STRATEGY_MENU::CELL:
-		m_ptr_dlg_strategy_frame->SetStrategyTypeText("매도설정");
-		break;
-	case STRATEGY_MENU::MONEY:
-		m_ptr_dlg_strategy_frame->SetStrategyTypeText("자금운용");
-		break;
-
-	}
 	m_strategy_state = MenuStyle;
-	m_ptr_dlg_strategy_frame->SetStrategyMenuState(MenuStyle);
+	m_ptr_dlg_strategy_scroll_Frame->SetStrategyMenuState(MenuStyle);
 }
 
 void CLATSManager::SetChildDlgPosition()
@@ -129,7 +150,9 @@ void CLATSManager::SetChildDlgPosition()
 	rt.bottom -= LATS::SIZE_HEIGHT_BORDER;
 
 	m_ptr_dlg_caption->MoveWindow(0, 0, rt.Width(), CAPTION::SIZE_HEIGHT);
-	m_ptr_dlg_strategy_frame->MoveWindow(0, CAPTION::SIZE_HEIGHT, STRATEGY::SIZE_FRAME_WIDTH, rt.Height());
-	m_ptr_dlg_UserInfo->MoveWindow(STRATEGY::SIZE_FRAME_WIDTH, rt.Height() + CAPTION::SIZE_HEIGHT - USER_INFO::SIZE_HEIGHT, rt.Width()  - STRATEGY::SIZE_FRAME_WIDTH, USER_INFO::SIZE_HEIGHT);
-	m_ptr_dlg_history->MoveWindow(STRATEGY::SIZE_FRAME_WIDTH, CAPTION::SIZE_HEIGHT, rt.Width() - STRATEGY::SIZE_FRAME_WIDTH, rt.Height() - USER_INFO::SIZE_HEIGHT);
+	m_ptr_dlg_strategy_frame->MoveWindow(0, CAPTION::SIZE_HEIGHT, STRATEGY::SIZE_WIDTH_FRAME, rt.Height());
+	m_ptr_dlg_UserInfo->MoveWindow(STRATEGY::SIZE_WIDTH_FRAME, rt.Height() + CAPTION::SIZE_HEIGHT - USER_INFO::SIZE_HEIGHT, rt.Width()  - STRATEGY::SIZE_WIDTH_FRAME, USER_INFO::SIZE_HEIGHT);
+	m_ptr_dlg_history->MoveWindow(STRATEGY::SIZE_WIDTH_FRAME, CAPTION::SIZE_HEIGHT, rt.Width() - STRATEGY::SIZE_WIDTH_FRAME, rt.Height() - USER_INFO::SIZE_HEIGHT);
+
+	m_ptr_dlg_strategy_frame->SetChildDlgPosition();
 }

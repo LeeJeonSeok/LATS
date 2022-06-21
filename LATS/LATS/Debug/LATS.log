@@ -1,19 +1,8 @@
 ﻿  LATSManager.cpp
-c:\users\김지영\desktop\leecoder\개발\git\lats\lats\lats\latsmanager.cpp(52): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  DlgStrategyInfo.cpp
-  DlgStrategyFrame.cpp
-c:\users\김지영\desktop\leecoder\개발\git\lats\lats\lats\dlgstrategyframe.cpp(57): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git\lats\lats\lats\latsmanager.cpp(61): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  LATS.cpp
-  DlgUserInfo.cpp
+  건너뛰고 있습니다... (관련된 변경 내용 없음)
   DlgStrategyScrollFrame.cpp
-  DlgStrategyScroll.cpp
-  DlgStrategySave.cpp
-  DlgStrategyMain.cpp
-  DlgMainFrame.cpp
-  DlgHistory.cpp
-  DlgCaption.cpp
-  코드를 생성하고 있습니다...
-  LATS.vcxproj -> C:\Users\김지영\Desktop\LeeCoder\개발\Git\LATS\LATS\Debug\LATS.exe
-  LATS.vcxproj -> C:\Users\김지영\Desktop\LeeCoder\개발\Git\LATS\LATS\Debug\LATS.pdb (Full PDB)
+  DlgStrategyFrame.cpp
+  LATS.vcxproj -> D:\Git\LATS\LATS\Debug\LATS.exe
+  LATS.vcxproj -> D:\Git\LATS\LATS\Debug\LATS.pdb (Full PDB)

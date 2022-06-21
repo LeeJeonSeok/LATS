@@ -15,9 +15,6 @@ private:
 
 private:
 
-	//virtual
-	void SetChildAndControlPosition();
-
 public:
 
 public:

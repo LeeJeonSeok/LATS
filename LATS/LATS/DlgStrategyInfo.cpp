@@ -24,7 +24,7 @@ CDlgStrategyInfo::~CDlgStrategyInfo()
 
 void CDlgStrategyInfo::SetChildAndControlPosition()
 {
-	m_stc_strategy_info_name.MoveWindow(10, 15, STRATEGY::SIZE_FRAME_WIDTH - 20, 45);
+	m_stc_strategy_info_name.MoveWindow(10, 15, STRATEGY::SIZE_WIDTH_FRAME - 20, 45);
 	m_btn_strategy_info_type_left.MoveWindow(10, 70, 60, 60);
 	m_stc_strategy_info_type.MoveWindow(70, 85, 160, 45);
 	m_btn_strategy_info_type_right.MoveWindow(230, 70, 60, 60);
@@ -91,12 +91,15 @@ void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeLeft()
 	switch (m_ptr_LATSManager->GetStrategyMenuState())
 	{
 	case STRATEGY_MENU::BUY:
+		m_stc_strategy_info_type.SetWindowTextA("자금 운용");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
 		break;
 	case STRATEGY_MENU::CELL:
+		m_stc_strategy_info_type.SetWindowTextA("매수 설정");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
 		break;
 	case STRATEGY_MENU::MONEY:
+		m_stc_strategy_info_type.SetWindowTextA("매도 설정");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
 		break;
 
@@ -110,12 +113,15 @@ void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeRight()
 	switch (m_ptr_LATSManager->GetStrategyMenuState())
 	{
 	case STRATEGY_MENU::BUY:
+		m_stc_strategy_info_type.SetWindowTextA("매도 설정");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
 		break;
 	case STRATEGY_MENU::CELL:
+		m_stc_strategy_info_type.SetWindowTextA("자금 운용");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
 		break;
 	case STRATEGY_MENU::MONEY:
+		m_stc_strategy_info_type.SetWindowTextA("매수 설정");
 		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
 		break;
 

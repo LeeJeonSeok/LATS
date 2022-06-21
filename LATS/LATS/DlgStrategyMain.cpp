@@ -22,9 +22,6 @@ CDlgStrategyMain::~CDlgStrategyMain()
 {
 }
 
-void CDlgStrategyMain::SetChildAndControlPosition()
-{
-}
 
 void CDlgStrategyMain::HideAllControls()
 {

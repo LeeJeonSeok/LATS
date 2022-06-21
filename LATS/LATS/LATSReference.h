@@ -34,7 +34,7 @@ namespace MAIN_FRAME
 namespace STRATEGY
 {
 	//Size
-	const int SIZE_FRAME_WIDTH = 302;
+	const int SIZE_WIDTH_FRAME = 302;
 	const int SIZE_WIDTH_MAIN = 292;
 	const int SIZE_WIDTH_SCROLL = 10;
 	const int SIZE_HEIGHT_INFO = 130;

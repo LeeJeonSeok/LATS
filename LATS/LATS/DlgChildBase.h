@@ -32,7 +32,7 @@ protected:
 protected:
 	
     //ControlPosition
-    virtual void SetChildAndControlPosition() = 0;
+    virtual void SetChildAndControlPosition();
 	
 
 public:
