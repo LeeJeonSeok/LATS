@@ -243,10 +243,6 @@
     <None Include="res\LATS.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\Strategy_Info_Btn_left_up.bmp" />
-    <Image Include="res\Strategy_Info_Btn_left_dn.bmp" />
-    <Image Include="res\Strategy_Info_Btn_Right_up.bmp" />
-    <Image Include="res\Strategy_Info_Btn_Right_dn.bmp" />
     <Image Include="res\Caption_Icon.bmp" />
     <Image Include="res\LATS.ico" />
   </ItemGroup>

@@ -24,32 +24,18 @@ CDlgStrategyInfo::~CDlgStrategyInfo()
 
 void CDlgStrategyInfo::SetChildAndControlPosition()
 {
-	m_stc_strategy_info_name.MoveWindow(10, 15, STRATEGY::SIZE_WIDTH_FRAME - 20, 45);
-	m_btn_strategy_info_type_left.MoveWindow(10, 70, 60, 60);
-	m_stc_strategy_info_type.MoveWindow(70, 85, 160, 45);
-	m_btn_strategy_info_type_right.MoveWindow(230, 70, 60, 60);
-}
 
-void CDlgStrategyInfo::SetStrategyMenuTypeText(CString Text)
-{
-	m_stc_strategy_info_type.SetWindowTextA(Text);
 }
 
 
 void CDlgStrategyInfo::DoDataExchange(CDataExchange* pDX)
 {
 	CDlgChildBase::DoDataExchange(pDX);
-	DDX_Control(pDX, IDC_BTN_STRATEGY_INFO_TYPE_LEFT, m_btn_strategy_info_type_left);
-	DDX_Control(pDX, IDC_BTN_STRATEGY_INFO_TYPE_RIGHT, m_btn_strategy_info_type_right);
-	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_NAME, m_stc_strategy_info_name);
-	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_TYPE, m_stc_strategy_info_type);
 }
 
 
 BEGIN_MESSAGE_MAP(CDlgStrategyInfo, CDlgChildBase)
 	ON_WM_CTLCOLOR()
-	ON_BN_CLICKED(IDC_BTN_STRATEGY_INFO_TYPE_LEFT, &CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeLeft)
-	ON_BN_CLICKED(IDC_BTN_STRATEGY_INFO_TYPE_RIGHT, &CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeRight)
 END_MESSAGE_MAP()
 
 
@@ -63,8 +49,6 @@ BOOL CDlgStrategyInfo::OnInitDialog()
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
 	SetBackgroundColor(STRATEGY::COLOR_BKGROUND_INFO);	
 
-	m_btn_strategy_info_type_left.LoadBitmaps(IDB_BMP_STRATEGY_INFO_BTN_LEFT_UP, IDB_BMP_STRATEGY_INFO_BTN_LEFT_DN);
-	m_btn_strategy_info_type_right.LoadBitmaps(IDB_BMP_STRATEGY_INFO_BTN_RIGHT_UP, IDB_BMP_STRATRGY_INFO_BTN_RIGHT_DN);
 
 	m_bInit = true;
 	return TRUE;  // return TRUE unless you set the focus to a control
@@ -85,45 +69,3 @@ HBRUSH CDlgStrategyInfo::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 }
 
 
-void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeLeft()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	switch (m_ptr_LATSManager->GetStrategyMenuState())
-	{
-	case STRATEGY_MENU::BUY:
-		m_stc_strategy_info_type.SetWindowTextA("자금 운용");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
-		break;
-	case STRATEGY_MENU::CELL:
-		m_stc_strategy_info_type.SetWindowTextA("매수 설정");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
-		break;
-	case STRATEGY_MENU::MONEY:
-		m_stc_strategy_info_type.SetWindowTextA("매도 설정");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
-		break;
-
-	}
-}
-
-
-void CDlgStrategyInfo::OnBnClickedBtnStrategyInfoTypeRight()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	switch (m_ptr_LATSManager->GetStrategyMenuState())
-	{
-	case STRATEGY_MENU::BUY:
-		m_stc_strategy_info_type.SetWindowTextA("매도 설정");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::CELL);
-		break;
-	case STRATEGY_MENU::CELL:
-		m_stc_strategy_info_type.SetWindowTextA("자금 운용");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::MONEY);
-		break;
-	case STRATEGY_MENU::MONEY:
-		m_stc_strategy_info_type.SetWindowTextA("매수 설정");
-		m_ptr_LATSManager->ChangeStrategyMenu(STRATEGY_MENU::BUY);
-		break;
-
-	}
-}

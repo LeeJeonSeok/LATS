@@ -52,6 +52,7 @@ void CDlgStrategyScrollFrame::SetStrategyMenuState(STRATEGY_MENU::ENUM MenuStyle
 		break;
 
 	}
+	m_ptr_dlg_strategy_main->ShowControlToMenuStyle(MenuStyle);
 }
 
 void CDlgStrategyScrollFrame::DoDataExchange(CDataExchange* pDX)

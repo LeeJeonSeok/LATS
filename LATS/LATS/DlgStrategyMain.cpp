@@ -39,6 +39,19 @@ void CDlgStrategyMain::SetPlaceToMoneyMenu()
 {
 }
 
+void CDlgStrategyMain::ShowControlToMenuStyle(STRATEGY_MENU::ENUM MenuStyle)
+{
+	switch (MenuStyle)
+	{
+	case STRATEGY_MENU::BUY:
+		break;
+	case STRATEGY_MENU::CELL:
+		break;
+	case STRATEGY_MENU::MONEY:
+		break;
+	}
+}
+
 void CDlgStrategyMain::DoDataExchange(CDataExchange* pDX)
 {
 	CDlgScrollBase::DoDataExchange(pDX);

@@ -2,6 +2,7 @@
 #include <afxdialogex.h>
 #include <vector>
 
+
 class CLATSManager;
 class CDlgChildBase :
     public CDialogEx
@@ -34,6 +35,8 @@ protected:
     //ControlPosition
     virtual void SetChildAndControlPosition();
 	
+    //ControlPosition
+
 
 public:
     DECLARE_MESSAGE_MAP()

@@ -24,6 +24,7 @@ public:
 	void SetPlaceToBuyMenu();
 	void SetPlaceToCellMenu();
 	void SetPlaceToMoneyMenu();
+	void ShowControlToMenuStyle(STRATEGY_MENU::ENUM MenuStyle);
 
 
 

@@ -26,6 +26,11 @@ void CDlgChildBase::SetChildAndControlPosition()
 {
 }
 
+void CDlgChildBase::SetRadioOrCheckAndStaticPosition(CMyImageTextButton& pRadioBtn, CStatic& pStatic, int Xpos, int Ypos, int Width, int Height)
+{
+
+}
+
 void CDlgChildBase::OnSize(UINT nType, int cx, int cy)
 {
 	CDialogEx::OnSize(nType, cx, cy);

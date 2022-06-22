@@ -155,17 +155,5 @@
     <Image Include="res\Caption_Icon.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\Strategy_Info_Btn_left_up.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Strategy_Info_Btn_left_dn.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Strategy_Info_Btn_Right_up.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Strategy_Info_Btn_Right_dn.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
   </ItemGroup>
 </Project>
