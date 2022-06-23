@@ -4,11 +4,11 @@
 
 CMyComboBox::CMyComboBox()
 {
-	m_crOuterLine = RGB(0, 0, 0);
-	m_crInnerLine = RGB(12, 12, 12);
-	m_crBorderBtnBright = RGB(60, 60, 60);
-	m_crBorderBtnDark = RGB(45, 45, 45);
-	m_crArrow = RGB(120, 120, 120);
+	m_crOuterLine = CONTROL_COMBO::COLOR_BORDER_OUTER;
+	m_crInnerLine = CONTROL_COMBO::COLOR_BORDER_INNER;
+	m_crBorderBtnBright = CONTROL_COMBO::COLOR_BORDER_BTN_BRIGHT;
+	m_crBorderBtnDark = CONTROL_COMBO::COLOR_BORDER_BTN_DARK;
+	m_crArrow = CONTROL_COMBO::COLOR_ARROW;
 
 	m_nSpace = 0;
 
@@ -37,19 +37,19 @@ void CMyComboBox::OnPaint()
 	// 활성 비활성 색상 값만 변경 해 줄 것
 	if (IsWindowEnabled())
 	{
-		m_crOuterLine = RGB(0, 0, 0);
-		m_crInnerLine = RGB(12, 12, 12);
-		m_crBorderBtnBright = RGB(60, 60, 60);
-		m_crBorderBtnDark = RGB(45, 45, 45);
-		m_crArrow = RGB(120, 120, 120);
+		m_crOuterLine = CONTROL_COMBO::COLOR_BORDER_OUTER;
+		m_crInnerLine = CONTROL_COMBO::COLOR_BORDER_INNER;
+		m_crBorderBtnBright = CONTROL_COMBO::COLOR_BORDER_BTN_BRIGHT;
+		m_crBorderBtnDark = CONTROL_COMBO::COLOR_BORDER_BTN_DARK;
+		m_crArrow = CONTROL_COMBO::COLOR_ARROW;		
 	}
 	else
 	{
-		m_crOuterLine = RGB(0, 0, 0);
-		m_crInnerLine = RGB(12, 12, 12);
-		m_crBorderBtnBright = RGB(60, 60, 60);
-		m_crBorderBtnDark = RGB(45, 45, 45);
-		m_crArrow = RGB(120, 120, 120);
+		m_crOuterLine = CONTROL_COMBO::COLOR_BORDER_OUTER_DIS;
+		m_crInnerLine = CONTROL_COMBO::COLOR_BORDER_INNER_DIS;
+		m_crBorderBtnBright = CONTROL_COMBO::COLOR_BORDER_BTN_DIS;
+		m_crBorderBtnDark = CONTROL_COMBO::COLOR_BORDER_BTN_DIS;
+		m_crArrow = CONTROL_COMBO::COLOR_ARROW_DIS;		
 	}
 	
 	pDC->Draw3dRect(&ClientRect, m_crOuterLine, m_crOuterLine);
@@ -172,7 +172,7 @@ void CMyComboBox::OnPaint()
 		for (int i = 0; i < cnt; i++)
 		{
 			//CPen inPen(PS_SOLID, 1, RGB(r, g, b));
-			CPen inPen(PS_SOLID, 1, RGB(0, 0, 0));
+			CPen inPen(PS_SOLID, 1, CONTROL_COMBO::COLOR_BKGROUND_DIS);
 			CPen* pInOldPen = pDC->SelectObject(&inPen);
 
 			pDC->MoveTo(leftPoint);

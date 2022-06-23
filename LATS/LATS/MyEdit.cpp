@@ -27,13 +27,13 @@ void CMyEdit::OnPaint()
 	// 활성 비활성 색상 값만 변경 해 줄 것
 	if (IsWindowEnabled())
 	{
-		m_crOuterLine = RGB(10, 10, 10);
-		m_crInnerLine = RGB(45, 45, 45);
+		m_crOuterLine = CONTROL_EDIT::COLOR_BORDER_OUTER;
+		m_crInnerLine = CONTROL_EDIT::COLOR_BORDER_INNER;
 	}
 	else
 	{
-		m_crOuterLine = RGB(10, 10, 10);
-		m_crInnerLine = RGB(45, 45, 45);
+		m_crOuterLine = CONTROL_EDIT::COLOR_BORDER_OUTER_DIS;
+		m_crInnerLine = CONTROL_EDIT::COLOR_BORDER_INNER_DIS;
 	}
 
 	// 컨트롤 활성화 시

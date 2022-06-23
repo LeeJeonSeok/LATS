@@ -8,16 +8,16 @@ CMyImageScrollBar::CMyImageScrollBar()
 	m_bCenter = false;
 	m_bHover = false;
 
-	//m_colSide = UI_CONFIG::COL_TEXT_DEFAULT;
-	m_colSide = RGB(130, 10, 200);
-	m_colCenter = RGB(255, 201, 14);
+	//m_colSide = CONTROLS::COL_TEXT_DEFAULT;
+	m_colSide = CONTROL_SCROLL::COLOR_SIDE;
+	m_colCenter = CONTROL_SCROLL::COLOR_CENTER;
 	
 	// ±âº»
-	m_colCenterOuter = RGB(100, 100, 100);
-	m_colCenterOuterHover = RGB(153, 153, 153);
+	m_colCenterOuter = CONTROL_SCROLL::COLOR_BORDER_OUTER;
+	m_colCenterOuterHover = CONTROL_SCROLL::COLOR_BORDER_OUTER_HOV;
 
-	m_colCenterInner = RGB(125, 125, 125);
-	m_colCenterInnerHover = RGB(194, 194, 201);
+	m_colCenterInner = CONTROL_SCROLL::COLOR_BORDER_INNER;
+	m_colCenterInnerHover = CONTROL_SCROLL::COLOR_BORDER_INNER_HOV;
 
 	m_nPos[0] = 0;
 	m_nPos[1] = 0;

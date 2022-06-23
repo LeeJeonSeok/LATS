@@ -26,9 +26,29 @@ void CDlgChildBase::SetChildAndControlPosition()
 {
 }
 
-void CDlgChildBase::SetRadioOrCheckAndStaticPosition(CMyImageTextButton& pRadioBtn, CStatic& pStatic, int Xpos, int Ypos, int Width, int Height)
+CRect CDlgChildBase::SetStaticAndEditPosition(CRect & rt, CWnd & Static, CString StaticText, CWnd & Edit, bool bUsingGroupBox)
 {
+	return rt;
+}
 
+CRect CDlgChildBase::SetRadioCheckAndStaticPosition_1P(CRect & rt, CWnd & Button, CWnd & Static, CString StaticText, bool bUsingGroupBox, bool bRadio)
+{
+	return rt;
+}
+
+CRect CDlgChildBase::SetRadioCheckAndStaticPosition_2P(CRect & rt, CWnd & Button1, CWnd & Static1, CString Static1Text, CWnd & Button2, CWnd & Static2, CString Static2Text, bool bUsingGroupBox, bool bRadio)
+{
+	return rt;
+}
+
+CRect CDlgChildBase::SetButtonPositionAndText_1P(CRect & rt, CWnd & Button, CString ButtonText, bool bUsingGroupBox)
+{
+	return rt;
+}
+
+CRect CDlgChildBase::SetButtonPositionAndText_2P(CRect & rt, CWnd & Button1, CString Button1Text, CWnd & Button2, CString Button2Text, bool bUsingGroupBox)
+{
+	return rt;
 }
 
 void CDlgChildBase::OnSize(UINT nType, int cx, int cy)
@@ -53,7 +73,7 @@ BOOL CDlgChildBase::OnInitDialog()
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
 		DEFAULT_PITCH | FF_SWISS, _T("ÈÞ¸Õ¿¾Ã¼"));
 
-	m_fnt_strategy_info.CreateFontA(30, 0, 0, 0, 0, FALSE, FALSE, 0, DEFAULT_CHARSET,
+	m_fnt_strategy_info.CreateFontA(15, 0, 0, 0, 0, FALSE, FALSE, 0, DEFAULT_CHARSET,
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
 		DEFAULT_PITCH | FF_SWISS, _T("ÈÞ¸Õ¿¾Ã¼"));
 
