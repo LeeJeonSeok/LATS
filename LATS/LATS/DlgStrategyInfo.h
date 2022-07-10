@@ -12,7 +12,18 @@ public:
 	virtual ~CDlgStrategyInfo();
 	
 private:
+	//controls
+	CMyImageTextButton m_rdo_strategy_info_buy;
+	CStatic m_stc_strategy_info_buy;
 
+	CMyImageTextButton m_rdo_strategy_info_cell;
+	CStatic m_stc_strategy_info_cell;
+
+	CMyImageTextButton m_rdo_strategy_info_money;
+	CStatic m_stc_strategy_info_money;
+
+	CMyImageTextButton m_rdo_strategy_info_stocks;
+	CStatic m_stc_strategy_info_stocks;
 
 private:
 

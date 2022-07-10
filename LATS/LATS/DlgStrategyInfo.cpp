@@ -31,6 +31,17 @@ void CDlgStrategyInfo::SetChildAndControlPosition()
 void CDlgStrategyInfo::DoDataExchange(CDataExchange* pDX)
 {
 	CDlgChildBase::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_RDO_STRATEGY_INFO_BUY,m_rdo_strategy_info_buy);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_BUY, m_stc_strategy_info_buy);
+
+	DDX_Control(pDX, IDC_RDO_STRATEGY_INFO_CELL, m_rdo_strategy_info_cell);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_CELL, m_stc_strategy_info_cell);
+
+	DDX_Control(pDX, IDC_RDO_STRATEGY_INFO_MONEY,m_rdo_strategy_info_money);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_MONEY,m_stc_strategy_info_money);
+
+	DDX_Control(pDX, IDC_RDO_STRATEGY_INFO_STOCKS, m_rdo_strategy_info_stocks);
+	DDX_Control(pDX, IDC_STC_STRATEGY_INFO_STOCKS, m_stc_strategy_info_stocks);
 }
 
 
